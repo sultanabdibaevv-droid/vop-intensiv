@@ -1,0 +1,380 @@
+<!-- ВОП интенсив · страница для Tilda (блок T123). Регистрация — попап-форма Tilda с якорем #popup:register -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+<style>
+
+.vop{
+  --bg:#0b0f17; --bg2:#111723; --card:#161d2b; --card2:#1c2536;
+  --line:rgba(255,255,255,.08); --text:#f4f7fb; --muted:#9aa6b8;
+  --acc:#5ee1ff;            /* главный акцент — поменяйте здесь, чтобы сменить цвет */
+  --acc2:#22b8f0; --acc-ink:#03202b; --acc-soft:rgba(94,225,255,.12);
+  --ok:#4ade80; --red:#ff4d5e;
+  --max:1080px;
+}
+.vop,.vop *{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+.vop{background:var(--bg);color:var(--text);font:400 16px/1.55 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:hidden}
+.vop img{max-width:100%;display:block}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 16px}
+.H{font-family:Montserrat,Inter,sans-serif;font-weight:900;text-transform:uppercase;line-height:1.04;letter-spacing:-.01em}
+.acc{color:var(--acc)}
+.nw{white-space:nowrap}
+.pill-acc{display:inline-block;background:var(--acc);color:var(--acc-ink);padding:.02em .28em .06em;border-radius:.22em;line-height:1.1}
+.vop section{padding:60px 0}
+.sec-title{font-size:clamp(28px,7vw,46px);text-align:center;margin-bottom:12px}
+.sec-sub{text-align:center;color:var(--muted);margin:0 auto 30px;max-width:560px;font-size:15px}
+
+/* button */
+.btn{position:relative;display:flex;align-items:center;justify-content:center;gap:12px;width:100%;text-align:center;border:0;cursor:pointer;
+  font:900 19px/1.15 Montserrat,sans-serif;text-transform:uppercase;letter-spacing:.01em;color:var(--acc-ink);
+  padding:24px 26px;border-radius:999px;background:linear-gradient(180deg,#9ff0ff,var(--acc) 45%,var(--acc2));
+  box-shadow:0 14px 40px -10px rgba(94,225,255,.6),inset 0 2px 0 rgba(255,255,255,.55);transition:transform .15s;-webkit-tap-highlight-color:transparent}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(1px) scale(.99)}
+.btn svg{width:22px;height:22px;flex:none}
+.btn.pulse::after{content:"";position:absolute;inset:0;border-radius:inherit;animation:pulse 2.2s infinite;pointer-events:none}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(94,225,255,.5)}70%{box-shadow:0 0 0 18px rgba(94,225,255,0)}100%{box-shadow:0 0 0 0 rgba(94,225,255,0)}}
+.cta-box{max-width:520px;margin:30px auto 0}
+.cta-note{text-align:center;color:var(--muted);font-size:13px;margin-top:12px}
+
+/* ===== HERO ===== */
+.hero{position:relative;padding:14px 0 30px;overflow:hidden;
+  background:radial-gradient(90% 55% at 50% 58%,rgba(34,184,240,.28),transparent 70%),
+             radial-gradient(60% 40% at 50% 0%,rgba(94,225,255,.10),transparent 70%)}
+.livebar{display:flex;align-items:center;justify-content:space-between;gap:10px;background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:999px;padding:6px 14px 6px 6px;max-width:520px;margin:0 auto}
+.live{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff;font:800 13px/1 Montserrat,sans-serif;text-transform:uppercase;padding:9px 14px;border-radius:999px;white-space:nowrap}
+.live i{width:8px;height:8px;border-radius:50%;background:#fff;animation:blink 1.4s infinite}
+@keyframes blink{50%{opacity:.25}}
+.livebar b{font:800 14px/1.2 Montserrat,sans-serif;text-transform:uppercase;text-align:right}
+.hero h1{font-size:clamp(31px,8.6vw,64px);text-align:center;margin:26px auto 0;max-width:900px}
+.hero h1 .pill-acc{margin-top:6px}
+.hero .lead{text-align:center;color:#c6d0de;max-width:560px;margin:16px auto 0;font-size:16px}
+
+.stage{position:relative;max-width:560px;margin:14px auto 0;aspect-ratio:1/1.12}
+.stage::before{content:"";position:absolute;left:50%;top:10%;transform:translateX(-50%);width:78%;aspect-ratio:1;border-radius:50%;
+  background:radial-gradient(circle at 50% 45%,rgba(94,225,255,.55),rgba(34,120,240,.25) 45%,transparent 70%);filter:blur(6px)}
+.stage::after{content:"";position:absolute;left:50%;top:12%;transform:translateX(-50%);width:70%;aspect-ratio:1;border-radius:50%;border:1.5px solid rgba(94,225,255,.35)}
+.stage .person{position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:74%;height:100%;z-index:1;
+  -webkit-mask-image:linear-gradient(180deg,#000 80%,transparent 100%);mask-image:linear-gradient(180deg,#000 80%,transparent 100%)}
+.stage .person img{width:100%;height:100%;object-fit:contain;object-position:bottom center;filter:drop-shadow(0 20px 40px rgba(0,0,0,.45))}
+.chip{position:absolute;z-index:2;background:rgba(20,28,42,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  border:1px solid rgba(94,225,255,.28);border-radius:14px;padding:8px 10px;box-shadow:0 12px 30px -10px rgba(0,0,0,.7);animation:float 6s ease-in-out infinite}
+.chip::before{content:"";position:absolute;top:-6px;right:14px;width:12px;height:12px;border-radius:50%;background:var(--acc);box-shadow:0 0 12px var(--acc)}
+.chip small{display:block;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.chip b{display:block;font:900 17px/1.1 Montserrat,sans-serif;color:var(--ok);margin-top:2px}
+.chip span{display:block;font-size:10.5px;color:#c6d0de;margin-top:1px}
+.c1{left:0;top:6%}.c2{right:0;top:14%;animation-delay:-1.5s}.c3{left:0;top:62%;animation-delay:-3s}.c4{right:0;top:70%;animation-delay:-4.5s}
+.c5,.c6{display:none}
+@media (min-width:560px){.c5,.c6{display:block}.c3{top:36%}.c4{top:42%}.c5{left:0;top:70%;animation-delay:-2s}.c6{right:0;top:76%;animation-delay:-5s}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.hero .cta-box{margin-top:-6px;position:relative;z-index:3}
+.speaker-line{margin-top:14px;color:#c6d0de;font-size:14px;text-align:center}
+.speaker-line b{color:var(--text)}
+
+/* ===== PROGRAM ===== */
+.days{display:grid;gap:34px;max-width:640px;margin:0 auto}
+.day{position:relative;background:var(--card);border:1px solid var(--line);border-radius:28px;padding:30px 18px 20px}
+.day-tab{position:absolute;top:-16px;left:50%;transform:translateX(-50%);white-space:nowrap;background:var(--acc);color:var(--acc-ink);font:800 14px/1 Montserrat,sans-serif;padding:10px 18px;border-radius:999px}
+.day h3{font-size:clamp(22px,6vw,30px);margin:10px 0 16px}
+.day h3 span{color:var(--acc)}
+.result{position:relative;display:flex;gap:14px;align-items:center;background:linear-gradient(135deg,#a8f2ff,var(--acc));color:var(--acc-ink);border-radius:22px;padding:24px 16px 16px;margin-bottom:16px}
+.result .tag{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:#0b0f17;color:var(--acc);font:800 12px/1 Montserrat,sans-serif;letter-spacing:.12em;text-transform:uppercase;padding:8px 14px;border-radius:999px;white-space:nowrap}
+.result .ico{flex:none;font-size:44px;line-height:1}
+.result p{font-weight:700;font-size:16px;line-height:1.35}
+.checks{list-style:none;display:grid;gap:12px}
+.checks li{display:flex;gap:12px;font-size:16px;line-height:1.4;color:#e2e8f0}
+.checks li::before{content:"";flex:none;width:24px;height:24px;border-radius:7px;background:var(--acc) no-repeat center/14px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2303202b' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 12.5l5 5L20 6.5'/%3E%3C/svg%3E")}
+
+/* ===== GIFTS ===== */
+.gifts{background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:28px;padding:22px 18px;max-width:640px;margin:0 auto}
+.gifts-head{display:flex;gap:14px;align-items:center}
+.gifts-head .ico{font-size:52px;line-height:1;filter:drop-shadow(0 8px 16px rgba(94,225,255,.3))}
+.gifts-head h2{font-size:clamp(19px,5vw,26px)}
+.note-pill{display:block;text-align:center;margin:16px auto 6px;background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:999px;padding:9px 14px;font-size:13px;color:#c6d0de;width:fit-content}
+.glist{display:grid;gap:10px;margin-top:14px}
+.g{display:flex;gap:12px;align-items:center;background:rgba(255,255,255,.035);border:1px solid var(--line);border-radius:18px;padding:12px 14px}
+.g .n{flex:none;width:44px;height:44px;border-radius:14px;background:var(--acc-soft);display:grid;place-items:center;font-size:22px}
+.g small{display:block;font:800 10px/1 Montserrat,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--acc);margin-bottom:5px}
+.g b{font-size:15px;font-weight:700;line-height:1.3}
+.gvalue{display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;margin-top:14px;background:var(--acc);color:var(--acc-ink);border-radius:18px;padding:14px 18px}
+.gvalue s{font-weight:700;opacity:.65}
+.gvalue b{font:900 24px/1 Montserrat,sans-serif;text-transform:uppercase}
+
+/* ===== HOW ===== */
+.steps{display:grid;gap:10px;max-width:640px;margin:0 auto}
+.step{display:flex;gap:14px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:16px}
+.step .num{flex:none;width:44px;height:44px;border-radius:50%;background:var(--acc);color:var(--acc-ink);display:grid;place-items:center;font:900 20px/1 Montserrat,sans-serif}
+.step b{display:block;font-size:17px}
+.step span{font-size:14px;color:var(--muted)}
+
+/* ===== REVIEWS ===== */
+.rail{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 16px 18px;margin:0 -16px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.rail::-webkit-scrollbar{display:none}
+.rev{flex:0 0 80%;max-width:320px;scroll-snap-align:center;background:var(--card);border:1.5px solid rgba(94,225,255,.3);border-radius:26px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 18px 40px -20px rgba(0,0,0,.8)}
+.rev-h{display:flex;align-items:center;gap:12px;padding:14px 16px 12px}
+.av{flex:none;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font:900 16px/1 Montserrat,sans-serif;background:var(--acc);color:var(--acc-ink)}
+.rev-h b{display:block;font-size:16px;line-height:1.2}
+.rev-h small{color:var(--muted);font-size:12px}
+.rev-h .stars{margin-left:auto;color:#ffd24d;font-size:12px;letter-spacing:1px;white-space:nowrap}
+.shot{all:unset;position:relative;display:block;cursor:zoom-in;margin:0 10px;border-radius:18px;overflow:hidden;aspect-ratio:4/5;background:#e9edf2}
+.shot img{width:100%;height:100%;object-fit:cover;object-position:top center}
+.shot::after{content:"";position:absolute;inset:auto 0 0 0;height:30%;background:linear-gradient(180deg,transparent,rgba(11,15,23,.55))}
+.shot .zoom{position:absolute;right:10px;bottom:10px;z-index:1;width:34px;height:34px;border-radius:50%;background:rgba(11,15,23,.75);display:grid;place-items:center;color:#fff}
+.shot .zoom svg{width:18px;height:18px}
+.badge{position:absolute;left:10px;top:10px;z-index:1;background:var(--ok);color:#052e16;font:900 13px/1 Montserrat,sans-serif;padding:8px 11px;border-radius:999px;box-shadow:0 6px 16px -4px rgba(0,0,0,.4)}
+.rev p{padding:14px 16px 18px;font-size:15px;line-height:1.45;color:#e2e8f0;font-weight:500}
+.rail-nav{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:4px}
+.rail-nav button{width:46px;height:46px;border-radius:50%;border:1px solid rgba(94,225,255,.35);background:var(--card);color:var(--acc);cursor:pointer;display:grid;place-items:center}
+.rail-nav button svg{width:20px;height:20px}
+.dots{display:flex;gap:6px}
+.dots i{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.2);transition:all .2s}
+.dots i.on{width:22px;border-radius:6px;background:var(--acc)}
+.disclaimer{text-align:center;color:var(--muted);font-size:12px;margin-top:14px}
+
+.lightbox{position:fixed;inset:0;z-index:80;background:rgba(0,0,0,.94);display:none;align-items:center;justify-content:center;padding:16px;overflow:auto}
+.lightbox.open{display:flex}
+.lightbox img{max-height:92vh;width:auto;border-radius:14px}
+.lightbox .x{position:fixed;top:14px;right:14px;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:#fff;font-size:22px;cursor:pointer}
+
+/* ===== FINAL ===== */
+.final{text-align:center;background:radial-gradient(90% 70% at 50% 0%,rgba(34,184,240,.22),transparent 70%),var(--bg2);border-top:1px solid var(--line)}
+.final h2{font-size:clamp(28px,7vw,46px);max-width:700px;margin:0 auto}
+.final p{color:#c6d0de;margin:14px auto 0;max-width:480px}
+
+.vop footer{padding:30px 0 130px;color:var(--muted);font-size:13px;text-align:center}
+
+/* ===== STICKY ===== */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:40;padding:10px 16px calc(12px + env(safe-area-inset-bottom));background:linear-gradient(180deg,transparent,rgba(11,15,23,.92) 35%);transition:transform .25s}
+.sticky .btn{max-width:520px;margin:0 auto;padding:20px;font-size:17px}
+.sticky.hide{transform:translateY(120%)}
+
+@media (min-width:760px){
+  .vop section{padding:84px 0}
+  .rev{flex-basis:300px}
+  .days{grid-template-columns:1fr 1fr;max-width:none;align-items:start}
+  .gifts{padding:30px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+<div class="vop">
+<main>
+<!-- ===== 1. HERO ===== -->
+<section class="hero">
+  <div class="wrap">
+    <div class="livebar">
+      <span class="live"><i></i>Тікелей эфир</span>
+      <b data-date>2 күн · тегін</b>
+    </div>
+
+    <h1 class="H">ВОП жұмысын <span class="acc nw">0-ден</span> сеніммен бастаудың <span class="pill-acc">2 күндік жүйесі</span></h1>
+    <p class="lead">КМИС, 10 негізгі приказ, жиі кездесетін 40 ауру және айыппұлдан қорғану — практикалық интенсивте бәрін жүйелеп беремін.</p>
+
+    <div class="stage">
+      <div class="person"><img src="https://sultanabdibaevv-droid.github.io/vop-intensiv/assets/elnora.png" alt="Абдиева Элнора — ВОП дәрігері, интенсив спикері" fetchpriority="high"></div>
+      <div class="chip c1"><small>Оқушылар</small><b>500+</b><span>ВОП дайындадым</span></div>
+      <div class="chip c2"><small>Айкерім</small><b>437 000 ₸</b><span>жалақы · 2 участок</span></div>
+      <div class="chip c3"><small>Гүльнара</small><b>1,5 млн ₸</b><span>5 айда табыс</span></div>
+      <div class="chip c4"><small>Тәжірибе</small><b>5 жыл</b><span>ВОП · 4 жыл наставник</span></div>
+      <div class="chip c5"><small>2-күн</small><b>КМИС</b><span>экраннан көрсетемін</span></div>
+      <div class="chip c6"><small>Асел</small><b>1 айда</b><span>декреттен жұмысқа</span></div>
+    </div>
+
+    <div class="cta-box">
+      <a class="btn pulse" href="#popup:register">Тегін тіркелу
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <p class="speaker-line">Спикер: <b>Абдиева Элнора</b> · ВОП, 500+ оқушының ұстазы</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 2. PROGRAM ===== -->
+<section id="program">
+  <div class="wrap">
+    <h2 class="H sec-title">Интенсив <span class="acc">бағдарламасы</span></h2>
+    <p class="sec-sub">2 кеш · тікелей эфир · практикамен</p>
+    <div class="days">
+      <article class="day">
+        <span class="day-tab">1-күн</span>
+        <h3 class="H">ВОП <span>не істейді</span></h3>
+        <div class="result"><span class="tag">+ Нәтиже</span><div class="ico">🎯</div><p>ВОП жұмысының жүйесін түсініп, нені білу керек, нені керек емесін ажыратасыз.</p></div>
+        <ul class="checks">
+          <li>ВОП дәрігері кім және қалай жұмыс істейді</li>
+          <li>20 жұмыс бағыты: 4 топ</li>
+          <li>95% жағдайда кездесетін 40 ауру</li>
+          <li>Нені білу керек, нені керек емес</li>
+        </ul>
+      </article>
+      <article class="day">
+        <span class="day-tab">2-күн · практика</span>
+        <h3 class="H">Құжаттама <span>және жүйе</span></h3>
+        <div class="result"><span class="tag">+ Нәтиже</span><div class="ico">🛡️</div><p>КМИС-те жұмыс істеуді көріп, приказдардағы дефектілер мен айыппұлдан қорғануды үйренесіз.</p></div>
+        <ul class="checks">
+          <li>10 негізгі приказ</li>
+          <li>Әр приказдағы жиі дефектілер</li>
+          <li>КМИС функцияларын экраннан көрсетемін</li>
+          <li>Айыппұлдан қалай қорғанамыз</li>
+        </ul>
+      </article>
+    </div>
+    <div class="cta-box"><a class="btn" href="#popup:register">Орнымды алу — тегін</a></div>
+  </div>
+</section>
+
+<!-- ===== 3. GIFTS ===== -->
+<section id="gifts" style="padding-top:0">
+  <div class="wrap">
+    <div class="gifts">
+      <div class="gifts-head">
+        <div class="ico">🎁</div>
+        <h2 class="H">Эфирге қатысып, <span class="acc">осы сыйлықтарды</span> алыңыз</h2>
+      </div>
+      <span class="note-pill">тек тікелей эфирде · запись болмайды</span>
+      <div class="glist">
+        <div class="g"><div class="n">🩺</div><div><small>Бонус 01</small><b>95% жағдайда кездесетін 40 аурудың тізімі</b></div></div>
+        <div class="g"><div class="n">💊</div><div><small>Бонус 02</small><b>Әр дәрігер білуі керек 100 препараттың тізімі</b></div></div>
+        <div class="g"><div class="n">📚</div><div><small>Бонус 03</small><b>Дәлелді медицина бойынша 1000 беттік кітап</b></div></div>
+        <div class="g"><div class="n">🏷️</div><div><small>Бонус 04</small><b>100 МКБ код</b></div></div>
+        <div class="g"><div class="n">📜</div><div><small>Бонус 05</small><b>10 негізгі приказ</b></div></div>
+      </div>
+      <div class="gvalue"><s>Құны 50 000 ₸</s><b>Тегін беремін</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 4. HOW TO GET GIFTS ===== -->
+<section id="how" style="padding-top:0">
+  <div class="wrap">
+    <h2 class="H sec-title">Сыйлықтарды <span class="acc">қалай аламын?</span></h2>
+    <p class="sec-sub">тек тікелей эфирде · запись болмайды</p>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><div><b>Тіркеліңіз</b><span>эфир сілтемесі WhatsApp-қа келеді</span></div></div>
+      <div class="step"><div class="num">2</div><div><b>Эфирде болыңыз</b><span>2 күн де соңына дейін</span></div></div>
+      <div class="step"><div class="num">3</div><div><b>Құпия сөзді жазыңыз</b><span>бонустар WhatsApp-қа келеді</span></div></div>
+    </div>
+    <div class="cta-box"><a class="btn pulse" href="#popup:register">Сыйлықтарды алу</a></div>
+  </div>
+</section>
+
+<!-- ===== 5. REVIEWS ===== -->
+<section id="reviews" style="padding-top:0">
+  <div class="wrap">
+    <h2 class="H sec-title">Оқушылардың <span class="acc">пікірлері</span></h2>
+    <p class="sec-sub">Курстан кейін жұмысқа кіріп, жалақы алып жүрген нақты оқушылар · басып үлкейтіңіз</p>
+
+    <div class="rail" id="rail">
+      <figure class="rev"><div class="rev-h"><div class="av">А</div><div><b>Айкерім</b><small>курс оқушысы</small></div><span class="stars">★★★★★</span></div>
+        <button class="shot" type="button" data-src="https://sultanabdibaevv-droid.github.io/vop-intensiv/assets/rv/aikerim.jpg"><span class="badge">437 000 ₸</span><img src="https://sultanabdibaevv-droid.github.io/vop-intensiv/assets/rv/aikerim.jpg" alt="Айкерім пікірі" loading="lazy"><span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8v6M8 11h6"/></svg></span></button>
+        <p>Курстан кейін 1 айда 2 участок алып, осындай табыс тапты</p></figure>
+
+      <figure class="rev"><div class="rev-h"><div class="av">Н</div><div><b>Нұрлы</b><small>Сентябрь ағыны</small></div><span class="stars">★★★★★</span></div>
+        <button class="shot" type="button" data-src="https://sultanabdibaevv-droid.github.io/vop-intensiv/assets/rv/nurly.jpg"><span class="badge">2 участок</span><img src="https://sultanabdibaevv-droid.github.io/vop-intensiv/assets/rv/nurly.jpg" alt="Нұрлы пікірі" loading="lazy"><span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8v6M8 11h6"/></svg></span></button>
+        <p>«Бірінші айлығымды алдым. Бірден 2 участок берген»</p></figure>
+
+      <figure class="rev"><div class="rev-h"><div class="av">Д</div><div><b>Диас</b><small>Сентябрь ағыны</small></div><span class="stars">★★★★★</span></div>
+        <button class="shot" type="button" data-src="https://sultanabdibaevv-droid.github.io/vop-intensiv/assets/rv/dias.jpg"><span class="badge">313 217 ₸</span><img src="https://sultanabdibaevv-droid.github.io/vop-intensiv/assets/rv/dias.jpg" alt="Диас пікірі" loading="lazy"><span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8v6M8 11h6"/></svg></span></button>
+        <p>Алғашқы жалақысы — 313 217 ₸ түсті</p></figure>
+
+      <figure class="rev"><div class="rev-h"><div class="av">Д</div><div><b>Диляра</b><small>Август ағыны</small></div><span class="stars">★★★★★</span></div>
+        <button class="shot" type="button" data-src="https://sultanabdibaevv-droid.github.io/vop-intensiv/assets/rv/dilyara.jpg"><span class="badge">1-жалақы</span><img src="https://sultanabdibaevv-droid.github.io/vop-intensiv/assets/rv/dilyara.jpg" alt="Диляра пікірі" loading="lazy"><span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8v6M8 11h6"/></svg></span></button>
+        <p>«Бірінші зарплатамды алдым, видеоматериалдардың көмегі тиіп тұр»</p></figure>
+
+      <figure class="rev"><div class="rev-h"><div class="av">Г</div><div><b>Гүльнара</b><small>Июль ағыны</small></div><span class="stars">★★★★★</span></div>
+        <button class="shot" type="button" data-src="https://sultanabdibaevv-droid.github.io/vop-intensiv/assets/rv/gulnara.jpg"><span class="badge">1,5 млн ₸</span><img src="https://sultanabdibaevv-droid.github.io/vop-intensiv/assets/rv/gulnara.jpg" alt="Гүльнара пікірі" loading="lazy"><span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8v6M8 11h6"/></svg></span></button>
+        <p>Диплом алған бойда жұмысқа кіріп, 5 айда 1,5 млн ₸ тапты</p></figure>
+
+      <figure class="rev"><div class="rev-h"><div class="av">С</div><div><b>Салтанат</b><small>курс түлегі</small></div><span class="stars">★★★★★</span></div>
+        <button class="shot" type="button" data-src="https://sultanabdibaevv-droid.github.io/vop-intensiv/assets/rv/saltanat.jpg"><span class="badge">КМИС ✓</span><img src="https://sultanabdibaevv-droid.github.io/vop-intensiv/assets/rv/saltanat.jpg" alt="Салтанат пікірі" loading="lazy"><span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8v6M8 11h6"/></svg></span></button>
+        <p>Ресейде оқыған, КМИС білмейтін. Енді әріптестері өзінен сұрайды</p></figure>
+
+      <figure class="rev"><div class="rev-h"><div class="av">Б</div><div><b>Балнұр</b><small>Май ағыны</small></div><span class="stars">★★★★★</span></div>
+        <button class="shot" type="button" data-src="https://sultanabdibaevv-droid.github.io/vop-intensiv/assets/rv/balnur.jpg"><span class="badge">Сенімділік</span><img src="https://sultanabdibaevv-droid.github.io/vop-intensiv/assets/rv/balnur.jpg" alt="Балнұр пікірі" loading="lazy"><span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8v6M8 11h6"/></svg></span></button>
+        <p>«Курсыңызда барлығы видеомен түсіндіріліп қамтылған. Өзімде ризамын»</p></figure>
+
+      <figure class="rev"><div class="rev-h"><div class="av">А</div><div><b>Асель</b><small>10 жыл декреттен кейін</small></div><span class="stars">★★★★★</span></div>
+        <button class="shot" type="button" data-src="https://sultanabdibaevv-droid.github.io/vop-intensiv/assets/rv/asel.jpg"><span class="badge">1 айда жұмыс</span><img src="https://sultanabdibaevv-droid.github.io/vop-intensiv/assets/rv/asel.jpg" alt="Асель пікірі" loading="lazy"><span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8v6M8 11h6"/></svg></span></button>
+        <p>«Араға 10 жыл салып жұмысқа шықтым. Алғаныма өкінбеймін»</p></figure>
+
+      <figure class="rev"><div class="rev-h"><div class="av">Д</div><div><b>Диас</b><small>курс оқушысы</small></div><span class="stars">★★★★★</span></div>
+        <button class="shot" type="button" data-src="https://sultanabdibaevv-droid.github.io/vop-intensiv/assets/rv/dias2.jpg"><span class="badge">5 күнге 63 000 ₸</span><img src="https://sultanabdibaevv-droid.github.io/vop-intensiv/assets/rv/dias2.jpg" alt="Диас пікірі" loading="lazy"><span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8v6M8 11h6"/></svg></span></button>
+        <p>«Маған 5 күнге 63 мың алдым, октябрь толық істесем — бір айлық»</p></figure>
+
+      <figure class="rev"><div class="rev-h"><div class="av">Н</div><div><b>Нұрай</b><small>Сентябрь ағыны</small></div><span class="stars">★★★★★</span></div>
+        <button class="shot" type="button" data-src="https://sultanabdibaevv-droid.github.io/vop-intensiv/assets/rv/nurai.jpg"><span class="badge">0% өкініш</span><img src="https://sultanabdibaevv-droid.github.io/vop-intensiv/assets/rv/nurai.jpg" alt="Нұрай пікірі" loading="lazy"><span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8v6M8 11h6"/></svg></span></button>
+        <p>«Сізден курс алғаныма 0% өкінбеймін, нағыз көмек болды»</p></figure>
+
+      <figure class="rev"><div class="rev-h"><div class="av">Н</div><div><b>Нұрсымбат</b><small>курс түлегі</small></div><span class="stars">★★★★★</span></div>
+        <button class="shot" type="button" data-src="https://sultanabdibaevv-droid.github.io/vop-intensiv/assets/rv/nursymbat.jpg"><span class="badge">Өзім қабылдаймын</span><img src="https://sultanabdibaevv-droid.github.io/vop-intensiv/assets/rv/nursymbat.jpg" alt="Нұрсымбат пікірі" loading="lazy"><span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8v6M8 11h6"/></svg></span></button>
+        <p>«Ешкімнен сұрамай, өзім қабылдай беретіндей сенімділік туды»</p></figure>
+
+      <figure class="rev"><div class="rev-h"><div class="av">Д</div><div><b>Дана мен Патим</b><small>эфир тыңдаушылары</small></div><span class="stars">★★★★★</span></div>
+        <button class="shot" type="button" data-src="https://sultanabdibaevv-droid.github.io/vop-intensiv/assets/rv/dana.jpg"><span class="badge">Эфир</span><img src="https://sultanabdibaevv-droid.github.io/vop-intensiv/assets/rv/dana.jpg" alt="Дана мен Патим пікірі" loading="lazy"><span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8v6M8 11h6"/></svg></span></button>
+        <p>«Супер подача! Бәрі түсінікті және артық сөзсіз»</p></figure>
+    </div>
+
+    <div class="rail-nav">
+      <button type="button" id="prev" aria-label="Алдыңғы"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+      <div class="dots" id="dots"></div>
+      <button type="button" id="next" aria-label="Келесі"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+    </div>
+    <p class="disclaimer">Скриндер оқушылар чатынан. Нәтиже әр адамда әртүрлі.</p>
+  </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section class="final">
+  <div class="wrap">
+    <h2 class="H">Келесі нәтиже <span class="acc">сіздікі</span> болсын</h2>
+    <p>2 күнде ВОП жұмысының жүйесін және 50 000 ₸ тұратын бонустарды тегін аласыз.</p>
+    <div class="cta-box"><a class="btn pulse" href="#popup:register">Тегін тіркелу</a>
+      <p class="cta-note">Тіркелу 30 секунд алады</p></div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">© Абдиева Элнора · «ВОП жұмысы 0-ден» интенсиві</div></footer>
+
+<div class="sticky hide" id="sticky"><a class="btn" href="#popup:register">Тегін тіркелу</a></div>
+
+<div class="lightbox" id="lb" aria-hidden="true"><button class="x" type="button" aria-label="Жабу">✕</button><img alt=""></div>
+</div>
+<script>
+/* ===== НАСТРОЙКИ: дата эфира ===== */
+const EVENT_DATE = "";
+const DAY1 = "";
+const DAY2 = "";
+const root = document.querySelector('.vop');
+if (EVENT_DATE) root.querySelectorAll('[data-date]').forEach(el => el.textContent = EVENT_DATE);
+const tabs = root.querySelectorAll('.day-tab');
+if (DAY1) tabs[0].textContent = '1-күн · ' + DAY1;
+if (DAY2) tabs[1].textContent = '2-күн · ' + DAY2 + ' · практика';
+const lb = document.getElementById('lb'), lbImg = lb.querySelector('img');
+document.addEventListener('keydown', e => { if (e.key === 'Escape') lb.classList.remove('open'); });
+/* ---- sticky button: hidden on first screen and at the final block ---- */
+const sticky = document.getElementById('sticky');
+let heroVis = true, finalVis = false;
+const upd = () => sticky.classList.toggle('hide', heroVis || finalVis);
+new IntersectionObserver(([en]) => { heroVis = en.isIntersecting || en.boundingClientRect.top > 0; upd(); }).observe(document.querySelector('.hero .cta-box'));
+new IntersectionObserver(([en]) => { finalVis = en.isIntersecting; upd(); }, { threshold: .3 }).observe(document.querySelector('.final'));
+
+/* ---- reviews rail: arrows + dots ---- */
+const rail = document.getElementById('rail');
+const cards = [...rail.children];
+const dots = document.getElementById('dots');
+cards.forEach(() => dots.appendChild(document.createElement('i')));
+const step = () => cards[1].offsetLeft - cards[0].offsetLeft;
+document.getElementById('prev').onclick = () => rail.scrollBy({ left: -step(), behavior: 'smooth' });
+document.getElementById('next').onclick = () => rail.scrollBy({ left: step(), behavior: 'smooth' });
+const markDot = () => {
+  const i = Math.min(Math.round(rail.scrollLeft / step()), cards.length - 1);
+  [...dots.children].forEach((d, k) => d.classList.toggle('on', k === i));
+};
+rail.addEventListener('scroll', () => requestAnimationFrame(markDot), { passive: true }); markDot();
+
+/* ---- lightbox ---- */
+rail.addEventListener('click', (e) => {
+  const b = e.target.closest('[data-src]'); if (!b) return;
+  lbImg.src = b.dataset.src; lbImg.alt = b.querySelector('img').alt; lb.classList.add('open');
+});
+lb.addEventListener('click', (e) => { if (e.target !== lbImg) lb.classList.remove('open'); });
+</script>
