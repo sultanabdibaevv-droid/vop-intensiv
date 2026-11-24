@@ -50,13 +50,25 @@ function sendToTilda(name, digits) {
   const fire = el => ['input', 'keyup', 'change', 'blur'].forEach(t => el.dispatchEvent(new Event(t, { bubbles: true })));
   const n = tf.querySelector('input[name="Name"]');
   const tel = tf.querySelector('.t-input-phonemask');
-  setVal.call(n, name); fire(n);
+  // Тильда принимает в имени только буквы, пробел, дефис и апостроф
+  const cleanName = name.replace(/[^\\p{L}\\s'-]/gu, ' ').replace(/\\s+/g, ' ').trim() || 'Аты жоқ';
+  setVal.call(n, cleanName); fire(n);
   setVal.call(tel, digits.slice(1)); fire(tel);
-  return new Promise(res => setTimeout(() => { tf.querySelector('.t-submit').click(); res(); }, 150));
+  return new Promise((res, rej) => setTimeout(() => {
+    tf.querySelector('.t-submit').click();
+    setTimeout(() => {
+      const box = tf.querySelector('.js-errorbox-all');
+      const msg = box && box.offsetParent !== null ? box.innerText.trim() : '';
+      const shown = [...tf.querySelectorAll('.t-input-error')].map(e => e.innerText.trim()).filter(Boolean);
+      (msg || shown.length) ? rej(new Error(msg || shown[0])) : res();
+    }, 1200);
+  }, 150));
 }
 
 /* ---- submit ---- */''')
-assert 'sendToTilda(name, digits);' in js
+js = js.replace("    alert('Қате шықты, қайта көріңіз.');",
+                "    document.querySelector('.agree').textContent = 'Тіркелу өтпеді. Атыңызды тек әріптермен жазып, қайта басыңыз.';")
+assert 'sendToTilda(name, digits);' in js and 'alert(' not in js
 
 out = ('<!-- ВОП интенсив · блок T123 для Tilda. Собран из index.html скриптом build_tilda.py.\n'
        '     Заявки уходят через скрытую форму Tilda (#popup:register) → Google Таблица → WhatsApp. -->\n'
