@@ -1,4 +1,5 @@
-<!-- ВОП интенсив · страница для Tilda (блок T123). Регистрация — попап-форма Tilda с якорем #popup:register -->
+<!-- ВОП интенсив · блок T123 для Tilda. Собран из index.html скриптом build_tilda.py.
+     Заявки уходят через скрытую форму Tilda (#popup:register) → Google Таблица → WhatsApp. -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
@@ -15,20 +16,22 @@
 .vop,.vop *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 .vop{background:var(--bg);color:var(--text);font:400 16px/1.55 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:hidden}
+body.lock{overflow:hidden}
 .vop img{max-width:100%;display:block}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 16px}
 .H{font-family:Montserrat,Inter,sans-serif;font-weight:900;text-transform:uppercase;line-height:1.04;letter-spacing:-.01em}
 .acc{color:var(--acc)}
 .nw{white-space:nowrap}
 .pill-acc{display:inline-block;background:var(--acc);color:var(--acc-ink);padding:.02em .28em .06em;border-radius:.22em;line-height:1.1}
-.vop section{padding:60px 0}
+.vop section{padding:44px 0}
+#program{padding-top:30px}
 .sec-title{font-size:clamp(28px,7vw,46px);text-align:center;margin-bottom:12px}
-.sec-sub{text-align:center;color:var(--muted);margin:0 auto 30px;max-width:560px;font-size:15px}
+.sec-sub{text-align:center;color:var(--muted);margin:0 auto 28px;max-width:560px;font-size:15px}
 
 /* button */
-.btn{position:relative;display:flex;align-items:center;justify-content:center;gap:12px;width:100%;text-align:center;border:0;cursor:pointer;
+.btn{position:relative;display:flex;align-items:center;justify-content:center;gap:12px;width:100%;text-align:center;border:0;cursor:pointer;text-decoration:none;
   font:900 19px/1.15 Montserrat,sans-serif;text-transform:uppercase;letter-spacing:.01em;color:var(--acc-ink);
-  padding:24px 26px;border-radius:999px;background:linear-gradient(180deg,#9ff0ff,var(--acc) 45%,var(--acc2));
+  padding:22px 26px;border-radius:999px;background:linear-gradient(180deg,#9ff0ff,var(--acc) 45%,var(--acc2));
   box-shadow:0 14px 40px -10px rgba(94,225,255,.6),inset 0 2px 0 rgba(255,255,255,.55);transition:transform .15s;-webkit-tap-highlight-color:transparent}
 .btn:hover{transform:translateY(-2px)}
 .btn:active{transform:translateY(1px) scale(.99)}
@@ -39,19 +42,21 @@ html{scroll-behavior:smooth}
 .cta-note{text-align:center;color:var(--muted);font-size:13px;margin-top:12px}
 
 /* ===== HERO ===== */
-.hero{position:relative;padding:14px 0 30px;overflow:hidden;
+.hero{position:relative;padding:12px 0 8px;overflow:hidden;
   background:radial-gradient(90% 55% at 50% 58%,rgba(34,184,240,.28),transparent 70%),
              radial-gradient(60% 40% at 50% 0%,rgba(94,225,255,.10),transparent 70%)}
-.livebar{display:flex;align-items:center;justify-content:space-between;gap:10px;background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:999px;padding:6px 14px 6px 6px;max-width:520px;margin:0 auto}
-.live{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff;font:800 13px/1 Montserrat,sans-serif;text-transform:uppercase;padding:9px 14px;border-radius:999px;white-space:nowrap}
+.livebar{display:flex;align-items:center;width:fit-content;max-width:100%;margin:0 auto;padding:5px 16px 5px 5px;border-radius:999px;
+  background:linear-gradient(90deg,rgba(255,77,94,.14),rgba(94,225,255,.10));border:1px solid rgba(94,225,255,.32);box-shadow:0 0 28px -8px rgba(94,225,255,.55)}
+.livebar .sep{flex:none;width:1px;height:18px;background:rgba(255,255,255,.22);margin:0 12px}
+.live{display:inline-flex;align-items:center;gap:7px;background:var(--red);color:#fff;font:800 12px/1 Montserrat,sans-serif;text-transform:uppercase;padding:8px 12px;border-radius:999px;white-space:nowrap;box-shadow:0 0 16px -2px rgba(255,77,94,.6)}
 .live i{width:8px;height:8px;border-radius:50%;background:#fff;animation:blink 1.4s infinite}
 @keyframes blink{50%{opacity:.25}}
-.livebar b{font:800 14px/1.2 Montserrat,sans-serif;text-transform:uppercase;text-align:right}
-.hero h1{font-size:clamp(31px,8.6vw,64px);text-align:center;margin:26px auto 0;max-width:900px}
+.livebar b{font:800 13px/1.2 Montserrat,sans-serif;text-transform:uppercase;color:var(--acc);white-space:nowrap}
+.hero h1{font-size:clamp(27px,7.7vw,64px);text-align:center;margin:16px auto 0;max-width:900px;text-wrap:balance}
 .hero h1 .pill-acc{margin-top:6px}
-.hero .lead{text-align:center;color:#c6d0de;max-width:560px;margin:16px auto 0;font-size:16px}
+.hero .lead{text-align:center;color:#c6d0de;max-width:560px;margin:10px auto 0;font-size:14.5px;line-height:1.45}
 
-.stage{position:relative;max-width:560px;margin:14px auto 0;aspect-ratio:1/1.12}
+.stage{position:relative;max-width:560px;margin:4px auto 0;height:clamp(215px,39svh,400px)}
 .stage::before{content:"";position:absolute;left:50%;top:10%;transform:translateX(-50%);width:78%;aspect-ratio:1;border-radius:50%;
   background:radial-gradient(circle at 50% 45%,rgba(94,225,255,.55),rgba(34,120,240,.25) 45%,transparent 70%);filter:blur(6px)}
 .stage::after{content:"";position:absolute;left:50%;top:12%;transform:translateX(-50%);width:70%;aspect-ratio:1;border-radius:50%;border:1.5px solid rgba(94,225,255,.35)}
@@ -68,8 +73,8 @@ html{scroll-behavior:smooth}
 .c5,.c6{display:none}
 @media (min-width:560px){.c5,.c6{display:block}.c3{top:36%}.c4{top:42%}.c5{left:0;top:70%;animation-delay:-2s}.c6{right:0;top:76%;animation-delay:-5s}}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
-.hero .cta-box{margin-top:-6px;position:relative;z-index:3}
-.speaker-line{margin-top:14px;color:#c6d0de;font-size:14px;text-align:center}
+.hero .cta-box{margin-top:-22px;position:relative;z-index:3}
+.speaker-line{margin-top:10px;color:#c6d0de;font-size:13px;text-align:center}
 .speaker-line b{color:var(--text)}
 
 /* ===== PROGRAM ===== */
@@ -149,11 +154,47 @@ html{scroll-behavior:smooth}
 .sticky .btn{max-width:520px;margin:0 auto;padding:20px;font-size:17px}
 .sticky.hide{transform:translateY(120%)}
 
+/* ===== MODAL (popup form) ===== */
+.modal{position:fixed;inset:0;z-index:70;display:flex;align-items:flex-end;justify-content:center;visibility:hidden;pointer-events:none;transition:visibility 0s .32s}
+.modal.open{visibility:visible;pointer-events:auto;transition:none}
+.modal .scrim{position:absolute;inset:0;background:rgba(3,6,12,.72);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);opacity:0;transition:opacity .25s}
+.modal.open .scrim{opacity:1}
+.sheet{position:relative;width:100%;max-width:520px;max-height:92vh;overflow:auto;background:linear-gradient(180deg,#1b2536,#121927);border:1.5px solid rgba(94,225,255,.35);border-bottom:0;
+  border-radius:28px 28px 0 0;padding:14px 18px calc(22px + env(safe-area-inset-bottom));transform:translateY(105%);transition:transform .32s cubic-bezier(.2,.9,.25,1);box-shadow:0 -20px 60px -10px rgba(34,184,240,.35)}
+.modal.open .sheet{transform:none}
+.grab{width:44px;height:5px;border-radius:3px;background:rgba(255,255,255,.22);margin:0 auto 14px}
+.sheet .close{position:absolute;top:12px;right:12px;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:rgba(255,255,255,.05);color:#fff;font-size:18px;cursor:pointer}
+.sheet .date-pill{display:block;width:fit-content;margin:0 auto 12px;background:var(--acc-soft);color:var(--acc);border:1px solid rgba(94,225,255,.35);font:800 13px/1 Montserrat,sans-serif;padding:9px 14px;border-radius:999px;text-transform:uppercase}
+.sheet h2{font-size:clamp(23px,6.4vw,30px);text-align:center}
+.sheet .sub{text-align:center;color:var(--muted);margin:8px 0 18px;font-size:14px}
+.field{display:flex;flex-direction:column;gap:7px;margin-bottom:12px}
+.field label{font-size:14px;font-weight:600;color:#c6d0de}
+.field input{width:100%;font:500 17px/1.2 Inter,sans-serif;color:var(--text);background:#0d131e;border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:17px 16px;outline:none;-webkit-appearance:none;appearance:none}
+.field input:focus{border-color:var(--acc);box-shadow:0 0 0 4px rgba(94,225,255,.16)}
+.field.invalid input{border-color:var(--red)}
+.err{color:#ff8a95;font-size:13px;display:none}
+.field.invalid .err{display:block}
+.sheet .btn{margin-top:6px}
+.agree{font-size:12px;color:var(--muted);text-align:center;margin-top:12px}
+.perks{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:14px;font-size:12.5px;color:#c6d0de}
+.ok{display:none;text-align:center;padding:16px 0 6px}
+.ok .check{width:76px;height:76px;border-radius:50%;margin:0 auto 16px;display:grid;place-items:center;background:var(--acc);color:var(--acc-ink);font-size:38px;font-weight:900}
+.ok h3{font-size:26px;margin-bottom:8px}
+.ok p{color:#c6d0de}
+
 @media (min-width:760px){
   .vop section{padding:84px 0}
+  #program{padding-top:48px}
+  .hero{padding:20px 0 16px}
+  .stage{height:auto;aspect-ratio:1/1.05;margin-top:12px}
+  .hero .lead{font-size:16px}
   .rev{flex-basis:300px}
   .days{grid-template-columns:1fr 1fr;max-width:none;align-items:start}
   .gifts{padding:30px}
+  .modal{align-items:center}
+  .sheet{border-radius:28px;border-bottom:1.5px solid rgba(94,225,255,.35);padding:28px 30px;transform:translateY(24px) scale(.97);opacity:0;transition:transform .25s,opacity .25s}
+  .modal.open .sheet{transform:none;opacity:1}
+  .grab{display:none}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
@@ -163,7 +204,7 @@ html{scroll-behavior:smooth}
 <section class="hero">
   <div class="wrap">
     <div class="livebar">
-      <span class="live"><i></i>Тікелей эфир</span>
+      <span class="live"><i></i>Тікелей эфир</span><span class="sep"></span>
       <b data-date>2 күн · тегін</b>
     </div>
 
@@ -181,9 +222,9 @@ html{scroll-behavior:smooth}
     </div>
 
     <div class="cta-box">
-      <a class="btn pulse" href="#popup:register">Тегін тіркелу
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <p class="speaker-line">Спикер: <b>Абдиева Элнора</b> · ВОП, 500+ оқушының ұстазы</p>
+      <button class="btn pulse" type="button" data-open>Тегін тіркелу
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      <p class="speaker-line">Спикер: <b>Абдиева Элнора</b> · 500+ оқушы</p>
     </div>
   </div>
 </section>
@@ -217,7 +258,7 @@ html{scroll-behavior:smooth}
         </ul>
       </article>
     </div>
-    <div class="cta-box"><a class="btn" href="#popup:register">Орнымды алу — тегін</a></div>
+    <div class="cta-box"><button class="btn" type="button" data-open>Орнымды алу — тегін</button></div>
   </div>
 </section>
 
@@ -252,7 +293,7 @@ html{scroll-behavior:smooth}
       <div class="step"><div class="num">2</div><div><b>Эфирде болыңыз</b><span>2 күн де соңына дейін</span></div></div>
       <div class="step"><div class="num">3</div><div><b>Құпия сөзді жазыңыз</b><span>бонустар WhatsApp-қа келеді</span></div></div>
     </div>
-    <div class="cta-box"><a class="btn pulse" href="#popup:register">Сыйлықтарды алу</a></div>
+    <div class="cta-box"><button class="btn pulse" type="button" data-open>Сыйлықтарды алу</button></div>
   </div>
 </section>
 
@@ -326,7 +367,7 @@ html{scroll-behavior:smooth}
   <div class="wrap">
     <h2 class="H">Келесі нәтиже <span class="acc">сіздікі</span> болсын</h2>
     <p>2 күнде ВОП жұмысының жүйесін және 50 000 ₸ тұратын бонустарды тегін аласыз.</p>
-    <div class="cta-box"><a class="btn pulse" href="#popup:register">Тегін тіркелу</a>
+    <div class="cta-box"><button class="btn pulse" type="button" data-open>Тегін тіркелу</button>
       <p class="cta-note">Тіркелу 30 секунд алады</p></div>
   </div>
 </section>
@@ -334,22 +375,152 @@ html{scroll-behavior:smooth}
 
 <footer><div class="wrap">© Абдиева Элнора · «ВОП жұмысы 0-ден» интенсиві</div></footer>
 
-<div class="sticky hide" id="sticky"><a class="btn" href="#popup:register">Тегін тіркелу</a></div>
+<div class="sticky hide" id="sticky"><button class="btn" type="button" data-open>Тегін тіркелу</button></div>
+
+<!-- ===== POPUP FORM ===== -->
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="scrim" data-close></div>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+    <div class="grab"></div>
+    <button class="close" type="button" data-close aria-label="Жабу">✕</button>
+    <form id="regForm" novalidate>
+      <span class="date-pill" data-date>2 күн · тікелей эфир</span>
+      <h2 class="H" id="mTitle">Тегін интенсивке <span class="acc">тіркелу</span></h2>
+      <p class="sub">Эфир сілтемесі мен сыйлықтар WhatsApp-қа келеді</p>
+      <div class="field">
+        <label for="name">Атыңыз</label>
+        <input id="name" name="name" autocomplete="name" autocapitalize="words" enterkeyhint="next" placeholder="Атыңызды жазыңыз" required>
+        <span class="err">Атыңызды жазыңыз</span>
+      </div>
+      <div class="field">
+        <label for="phone">WhatsApp нөміріңіз</label>
+        <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" enterkeyhint="done" placeholder="+7 (7__) ___-__-__" required>
+        <span class="err">Нөмірді толық жазыңыз</span>
+      </div>
+      <button class="btn pulse" type="submit" id="submitBtn">Орнымды алу</button>
+      <div class="perks"><span>🎁 50 000 ₸ бонус</span><span>🔒 Деректер қорғалған</span></div>
+      <p class="agree">Батырманы басу арқылы деректеріңізді өңдеуге келісім бересіз.</p>
+    </form>
+    <div class="ok" id="regOk" role="status">
+      <div class="check">✓</div>
+      <h3 class="H">Сіз тіркелдіңіз!</h3>
+      <p>Эфир сілтемесін WhatsApp-қа жібереміз. Соңына дейін қалыңыз — бонустар құпия сөз арқылы беріледі.</p>
+    </div>
+  </div>
+</div>
 
 <div class="lightbox" id="lb" aria-hidden="true"><button class="x" type="button" aria-label="Жабу">✕</button><img alt=""></div>
 </div>
 <script>
-/* ===== НАСТРОЙКИ: дата эфира ===== */
-const EVENT_DATE = "";
+/* ===== НАСТРОЙКИ =====
+   EVENT_DATE     — дата и время эфира, например "12–13 желтоқсан · 20:00". Подставится в шапку и в форму.
+   DAY1 / DAY2    — даты дней для карточек программы, например "12 желтоқсан".
+   FORM_ENDPOINT  — куда отправлять заявки (Google Apps Script / вебхук). Пусто = заявки никуда не уходят.
+   WHATSAPP_GROUP — ссылка, куда перекинуть человека после регистрации (необязательно). */
+const EVENT_DATE = "";      // пусто = дата ставится автоматически: завтра и послезавтра
+const EVENT_TIME = "20:00";
 const DAY1 = "";
 const DAY2 = "";
-const root = document.querySelector('.vop');
-if (EVENT_DATE) root.querySelectorAll('[data-date]').forEach(el => el.textContent = EVENT_DATE);
-const tabs = root.querySelectorAll('.day-tab');
-if (DAY1) tabs[0].textContent = '1-күн · ' + DAY1;
-if (DAY2) tabs[1].textContent = '2-күн · ' + DAY2 + ' · практика';
+const WHATSAPP_GROUP = "https://chat.whatsapp.com/FQ8KAUS87Th8WpgZbFLFHk";
+
+/* ---- auto date: tomorrow + the day after, in Kazakh ---- */
+const KZ_MONTHS = ['қаңтар','ақпан','наурыз','сәуір','мамыр','маусым','шілде','тамыз','қыркүйек','қазан','қараша','желтоқсан'];
+const d1 = new Date(); d1.setDate(d1.getDate() + 1);
+const d2 = new Date(d1); d2.setDate(d1.getDate() + 1);
+const fmt = d => d.getDate() + ' ' + KZ_MONTHS[d.getMonth()];
+const autoRange = d1.getMonth() === d2.getMonth()
+  ? d1.getDate() + '–' + d2.getDate() + ' ' + KZ_MONTHS[d1.getMonth()]
+  : fmt(d1) + ' – ' + fmt(d2);
+const dateLabel = EVENT_DATE || (autoRange + ' · ' + EVENT_TIME);
+document.querySelectorAll('[data-date]').forEach(el => el.textContent = dateLabel);
+const tabs = document.querySelectorAll('.day-tab');
+tabs[0].textContent = '1-күн · ' + (DAY1 || fmt(d1));
+tabs[1].textContent = '2-күн · ' + (DAY2 || fmt(d2)) + ' · практика';
+
+/* ---- popup ---- */
+const modal = document.getElementById('modal');
+const form = document.getElementById('regForm');
+const nameEl = document.getElementById('name');
+const phone = document.getElementById('phone');
 const lb = document.getElementById('lb'), lbImg = lb.querySelector('img');
-document.addEventListener('keydown', e => { if (e.key === 'Escape') lb.classList.remove('open'); });
+let lastFocus = null;
+function openModal() {
+  lastFocus = document.activeElement;
+  modal.classList.add('open'); modal.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('lock');
+  setTimeout(() => { if (form.style.display !== 'none') nameEl.focus(); }, 300);
+}
+function closeModal() {
+  modal.classList.remove('open'); modal.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('lock');
+  if (lastFocus) lastFocus.focus({ preventScroll: true });
+}
+document.querySelectorAll('[data-open]').forEach(b => b.addEventListener('click', openModal));
+modal.querySelectorAll('[data-close]').forEach(b => b.addEventListener('click', closeModal));
+document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeModal(); lb.classList.remove('open'); } });
+if (location.hash === '#register') openModal();
+
+/* ---- phone mask +7 (7XX) XXX-XX-XX ---- */
+phone.addEventListener('focus', () => { if (!phone.value) phone.value = '+7 '; });
+phone.addEventListener('blur', () => { if (phone.value.trim() === '+7') phone.value = ''; });
+phone.addEventListener('input', () => {
+  let d = phone.value.replace(/\D/g, '');
+  if (d.startsWith('78')) d = '7' + d.slice(2);        // "+7 " + 8701... -> 7701...
+  else if (d.startsWith('8')) d = '7' + d.slice(1);     // 8701... -> 7701...
+  if (d && !d.startsWith('7')) d = '7' + d;
+  d = d.slice(0, 11);
+  const p = d.slice(1);
+  let out = '+7 ';
+  if (p.length) out += '(' + p.slice(0, 3);
+  if (p.length >= 3) out += ') ';
+  if (p.length > 3) out += p.slice(3, 6);
+  if (p.length > 6) out += '-' + p.slice(6, 8);
+  if (p.length > 8) out += '-' + p.slice(8, 10);
+  phone.value = out.trimEnd();
+});
+nameEl.addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); phone.focus(); } });
+
+/* ---- bridge to the hidden Tilda form (BF502N, #popup:register) ---- */
+function sendToTilda(name, digits) {
+  const tf = document.querySelector('form.t-form.js-form-proccess');
+  if (!tf) return Promise.reject(new Error('Tilda form not found'));
+  const setVal = Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value').set;
+  const fire = el => ['input', 'keyup', 'change', 'blur'].forEach(t => el.dispatchEvent(new Event(t, { bubbles: true })));
+  const n = tf.querySelector('input[name="Name"]');
+  const tel = tf.querySelector('.t-input-phonemask');
+  setVal.call(n, name); fire(n);
+  setVal.call(tel, digits.slice(1)); fire(tel);
+  return new Promise(res => setTimeout(() => { tf.querySelector('.t-submit').click(); res(); }, 150));
+}
+
+/* ---- submit ---- */
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const name = nameEl.value.trim();
+  const digits = phone.value.replace(/\D/g, '');
+  let ok = true;
+  [[nameEl, name.length >= 2], [phone, digits.length === 11]].forEach(([el, valid]) => {
+    el.closest('.field').classList.toggle('invalid', !valid); if (!valid) ok = false;
+  });
+  if (!ok) { form.querySelector('.invalid input').focus(); return; }
+
+  const q = new URLSearchParams(location.search);
+  const data = { name, phone: '+' + digits, page: location.origin + location.pathname, time: new Date().toISOString(),
+    utm_source: q.get('utm_source') || '', utm_medium: q.get('utm_medium') || '', utm_campaign: q.get('utm_campaign') || '', utm_content: q.get('utm_content') || '' };
+  const btn = document.getElementById('submitBtn');
+  btn.disabled = true; btn.textContent = 'Жіберілуде...';
+  try {
+    await sendToTilda(name, digits);
+    form.style.display = 'none';
+    document.getElementById('regOk').style.display = 'block';
+    // Тильда сама перекинет в WhatsApp после записи в таблицу; запасной переход через 7 секунд
+    setTimeout(() => { location.href = WHATSAPP_GROUP; }, 7000);
+  } catch (err) {
+    btn.disabled = false; btn.textContent = 'Орнымды алу';
+    alert('Қате шықты, қайта көріңіз.');
+  }
+});
+
 /* ---- sticky button: hidden on first screen and at the final block ---- */
 const sticky = document.getElementById('sticky');
 let heroVis = true, finalVis = false;

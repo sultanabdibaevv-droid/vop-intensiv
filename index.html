@@ -31,14 +31,15 @@ img{max-width:100%;display:block}
 .acc{color:var(--acc)}
 .nw{white-space:nowrap}
 .pill-acc{display:inline-block;background:var(--acc);color:var(--acc-ink);padding:.02em .28em .06em;border-radius:.22em;line-height:1.1}
-section{padding:60px 0}
+section{padding:44px 0}
+#program{padding-top:30px}
 .sec-title{font-size:clamp(28px,7vw,46px);text-align:center;margin-bottom:12px}
-.sec-sub{text-align:center;color:var(--muted);margin:0 auto 30px;max-width:560px;font-size:15px}
+.sec-sub{text-align:center;color:var(--muted);margin:0 auto 28px;max-width:560px;font-size:15px}
 
 /* button */
-.btn{position:relative;display:flex;align-items:center;justify-content:center;gap:12px;width:100%;text-align:center;border:0;cursor:pointer;
+.btn{position:relative;display:flex;align-items:center;justify-content:center;gap:12px;width:100%;text-align:center;border:0;cursor:pointer;text-decoration:none;
   font:900 19px/1.15 Montserrat,sans-serif;text-transform:uppercase;letter-spacing:.01em;color:var(--acc-ink);
-  padding:24px 26px;border-radius:999px;background:linear-gradient(180deg,#9ff0ff,var(--acc) 45%,var(--acc2));
+  padding:22px 26px;border-radius:999px;background:linear-gradient(180deg,#9ff0ff,var(--acc) 45%,var(--acc2));
   box-shadow:0 14px 40px -10px rgba(94,225,255,.6),inset 0 2px 0 rgba(255,255,255,.55);transition:transform .15s;-webkit-tap-highlight-color:transparent}
 .btn:hover{transform:translateY(-2px)}
 .btn:active{transform:translateY(1px) scale(.99)}
@@ -49,19 +50,21 @@ section{padding:60px 0}
 .cta-note{text-align:center;color:var(--muted);font-size:13px;margin-top:12px}
 
 /* ===== HERO ===== */
-.hero{position:relative;padding:14px 0 30px;overflow:hidden;
+.hero{position:relative;padding:12px 0 8px;overflow:hidden;
   background:radial-gradient(90% 55% at 50% 58%,rgba(34,184,240,.28),transparent 70%),
              radial-gradient(60% 40% at 50% 0%,rgba(94,225,255,.10),transparent 70%)}
-.livebar{display:flex;align-items:center;justify-content:space-between;gap:10px;background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:999px;padding:6px 14px 6px 6px;max-width:520px;margin:0 auto}
-.live{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff;font:800 13px/1 Montserrat,sans-serif;text-transform:uppercase;padding:9px 14px;border-radius:999px;white-space:nowrap}
+.livebar{display:flex;align-items:center;width:fit-content;max-width:100%;margin:0 auto;padding:5px 16px 5px 5px;border-radius:999px;
+  background:linear-gradient(90deg,rgba(255,77,94,.14),rgba(94,225,255,.10));border:1px solid rgba(94,225,255,.32);box-shadow:0 0 28px -8px rgba(94,225,255,.55)}
+.livebar .sep{flex:none;width:1px;height:18px;background:rgba(255,255,255,.22);margin:0 12px}
+.live{display:inline-flex;align-items:center;gap:7px;background:var(--red);color:#fff;font:800 12px/1 Montserrat,sans-serif;text-transform:uppercase;padding:8px 12px;border-radius:999px;white-space:nowrap;box-shadow:0 0 16px -2px rgba(255,77,94,.6)}
 .live i{width:8px;height:8px;border-radius:50%;background:#fff;animation:blink 1.4s infinite}
 @keyframes blink{50%{opacity:.25}}
-.livebar b{font:800 14px/1.2 Montserrat,sans-serif;text-transform:uppercase;text-align:right}
-.hero h1{font-size:clamp(31px,8.6vw,64px);text-align:center;margin:26px auto 0;max-width:900px}
+.livebar b{font:800 13px/1.2 Montserrat,sans-serif;text-transform:uppercase;color:var(--acc);white-space:nowrap}
+.hero h1{font-size:clamp(27px,7.7vw,64px);text-align:center;margin:16px auto 0;max-width:900px;text-wrap:balance}
 .hero h1 .pill-acc{margin-top:6px}
-.hero .lead{text-align:center;color:#c6d0de;max-width:560px;margin:16px auto 0;font-size:16px}
+.hero .lead{text-align:center;color:#c6d0de;max-width:560px;margin:10px auto 0;font-size:14.5px;line-height:1.45}
 
-.stage{position:relative;max-width:560px;margin:14px auto 0;aspect-ratio:1/1.12}
+.stage{position:relative;max-width:560px;margin:4px auto 0;height:clamp(215px,39svh,400px)}
 .stage::before{content:"";position:absolute;left:50%;top:10%;transform:translateX(-50%);width:78%;aspect-ratio:1;border-radius:50%;
   background:radial-gradient(circle at 50% 45%,rgba(94,225,255,.55),rgba(34,120,240,.25) 45%,transparent 70%);filter:blur(6px)}
 .stage::after{content:"";position:absolute;left:50%;top:12%;transform:translateX(-50%);width:70%;aspect-ratio:1;border-radius:50%;border:1.5px solid rgba(94,225,255,.35)}
@@ -78,8 +81,8 @@ section{padding:60px 0}
 .c5,.c6{display:none}
 @media (min-width:560px){.c5,.c6{display:block}.c3{top:36%}.c4{top:42%}.c5{left:0;top:70%;animation-delay:-2s}.c6{right:0;top:76%;animation-delay:-5s}}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
-.hero .cta-box{margin-top:-6px;position:relative;z-index:3}
-.speaker-line{margin-top:14px;color:#c6d0de;font-size:14px;text-align:center}
+.hero .cta-box{margin-top:-22px;position:relative;z-index:3}
+.speaker-line{margin-top:10px;color:#c6d0de;font-size:13px;text-align:center}
 .speaker-line b{color:var(--text)}
 
 /* ===== PROGRAM ===== */
@@ -189,6 +192,10 @@ footer{padding:30px 0 130px;color:var(--muted);font-size:13px;text-align:center}
 
 @media (min-width:760px){
   section{padding:84px 0}
+  #program{padding-top:48px}
+  .hero{padding:20px 0 16px}
+  .stage{height:auto;aspect-ratio:1/1.05;margin-top:12px}
+  .hero .lead{font-size:16px}
   .rev{flex-basis:300px}
   .days{grid-template-columns:1fr 1fr;max-width:none;align-items:start}
   .gifts{padding:30px}
@@ -207,7 +214,7 @@ footer{padding:30px 0 130px;color:var(--muted);font-size:13px;text-align:center}
 <section class="hero">
   <div class="wrap">
     <div class="livebar">
-      <span class="live"><i></i>Тікелей эфир</span>
+      <span class="live"><i></i>Тікелей эфир</span><span class="sep"></span>
       <b data-date>2 күн · тегін</b>
     </div>
 
@@ -227,7 +234,7 @@ footer{padding:30px 0 130px;color:var(--muted);font-size:13px;text-align:center}
     <div class="cta-box">
       <button class="btn pulse" type="button" data-open>Тегін тіркелу
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
-      <p class="speaker-line">Спикер: <b>Абдиева Элнора</b> · ВОП, 500+ оқушының ұстазы</p>
+      <p class="speaker-line">Спикер: <b>Абдиева Элнора</b> · 500+ оқушы</p>
     </div>
   </div>
 </section>
@@ -420,16 +427,26 @@ footer{padding:30px 0 130px;color:var(--muted);font-size:13px;text-align:center}
    DAY1 / DAY2    — даты дней для карточек программы, например "12 желтоқсан".
    FORM_ENDPOINT  — куда отправлять заявки (Google Apps Script / вебхук). Пусто = заявки никуда не уходят.
    WHATSAPP_GROUP — ссылка, куда перекинуть человека после регистрации (необязательно). */
-const EVENT_DATE = "";
+const EVENT_DATE = "";      // пусто = дата ставится автоматически: завтра и послезавтра
+const EVENT_TIME = "20:00";
 const DAY1 = "";
 const DAY2 = "";
 const FORM_ENDPOINT = "";
 const WHATSAPP_GROUP = "https://chat.whatsapp.com/FQ8KAUS87Th8WpgZbFLFHk";
 
-if (EVENT_DATE) document.querySelectorAll('[data-date]').forEach(el => el.textContent = EVENT_DATE);
+/* ---- auto date: tomorrow + the day after, in Kazakh ---- */
+const KZ_MONTHS = ['қаңтар','ақпан','наурыз','сәуір','мамыр','маусым','шілде','тамыз','қыркүйек','қазан','қараша','желтоқсан'];
+const d1 = new Date(); d1.setDate(d1.getDate() + 1);
+const d2 = new Date(d1); d2.setDate(d1.getDate() + 1);
+const fmt = d => d.getDate() + ' ' + KZ_MONTHS[d.getMonth()];
+const autoRange = d1.getMonth() === d2.getMonth()
+  ? d1.getDate() + '–' + d2.getDate() + ' ' + KZ_MONTHS[d1.getMonth()]
+  : fmt(d1) + ' – ' + fmt(d2);
+const dateLabel = EVENT_DATE || (autoRange + ' · ' + EVENT_TIME);
+document.querySelectorAll('[data-date]').forEach(el => el.textContent = dateLabel);
 const tabs = document.querySelectorAll('.day-tab');
-if (DAY1) tabs[0].textContent = '1-күн · ' + DAY1;
-if (DAY2) tabs[1].textContent = '2-күн · ' + DAY2 + ' · практика';
+tabs[0].textContent = '1-күн · ' + (DAY1 || fmt(d1));
+tabs[1].textContent = '2-күн · ' + (DAY2 || fmt(d2)) + ' · практика';
 
 /* ---- popup ---- */
 const modal = document.getElementById('modal');
