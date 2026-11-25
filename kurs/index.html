@@ -417,6 +417,28 @@ footer{padding:28px 0 130px;color:var(--muted);font-size:13px;text-align:center}
 .g-perks span{display:block;font-size:11.5px;color:var(--muted);margin-top:3px}
 .guard .btn{max-width:440px;margin:0 auto}
 @media (min-width:760px){.guard{padding:48px 40px 34px}}
+
+.g-sub b{color:#fff}
+.g-all{display:inline-block;margin-top:14px;font:800 12.5px/1 Inter,sans-serif;color:#052e16;background:var(--ok);padding:9px 14px;border-radius:999px;box-shadow:0 8px 24px -8px rgba(74,222,128,.8)}
+.cover{max-width:520px;margin:24px auto 0}
+.cv-track{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px}
+.cv-seg{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:12px;padding:10px 6px}
+.cv-seg b{display:block;font-size:14px}
+.cv-seg small{display:block;font-size:12px;color:var(--muted);margin-top:2px}
+.cv-seg.win{border-color:rgba(74,222,128,.5);background:rgba(74,222,128,.12)}
+.cv-seg.win b,.cv-seg.win small{color:var(--ok)}
+.cv-bar{position:relative;margin-top:8px;height:30px;border-radius:999px;background:linear-gradient(90deg,var(--acc),var(--ok));display:grid;place-items:center;box-shadow:0 0 22px rgba(74,222,128,.45)}
+.cv-bar span{font:800 12.5px/1 Montserrat,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#052e16}
+.g-how{font:800 15px/1.2 Montserrat,sans-serif;text-transform:uppercase;letter-spacing:.06em;color:var(--soft);margin:28px 0 12px}
+.how3{list-style:none;display:grid;gap:10px;max-width:520px;margin:0 auto 22px;text-align:left}
+.how3 li{display:flex;gap:12px;align-items:center;background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:16px;padding:12px 14px}
+.how3 li > span{flex:none;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font:900 15px/1 Montserrat,sans-serif;color:#052e16;background:linear-gradient(160deg,#a7f3c4,#4ade80)}
+.how3 b{display:block;font-size:15.5px}
+.how3 small{display:block;font-size:13px;color:var(--muted);margin-top:2px;line-height:1.35}
+.feat li.cur::before{content:"★";background:rgba(74,222,128,.18);color:var(--ok)}
+.feat li.cur{color:var(--ok);font-weight:700}
+.ok-t{color:var(--ok)}
+@media (min-width:760px){.how3{grid-template-columns:repeat(3,1fr);max-width:none}.how3 li{flex-direction:column;text-align:center}}
 </style>
 </head>
 <body>
@@ -475,23 +497,26 @@ footer{padding:28px 0 130px;color:var(--muted);font-size:13px;text-align:center}
   <div class="wrap">
     <div class="guard">
       <div class="g-shield"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg></div>
-      <span class="g-kicker">Біздің кепіліміз</span>
+      <span class="g-kicker">Біздің кепіліміз · әр оқушыға</span>
       <h2 class="g-title">2 айлық алғанша<br><span>жаныңыздамыз</span></h2>
-      <p class="g-sub">Курсты бітіріп, жалғыз қалмайсыз. Жұмысқа кіргеннен кейін де куратор қасыңызда — екінші жалақыңызды алғанша сүйемелдейміз.</p>
+      <p class="g-sub">Курсты оқып кетіп, жалғыз қалмайсыз. Куратор оқу кезінде де, жұмысқа кіргеннен кейін де кері байланыс береді — <b>екінші жалақыңызды алғанша</b>.</p>
+      <span class="g-all">✓ Барлық 3 тарифте бар</span>
 
-      <ol class="road">
-        <li><span class="dot">1</span><div><b>Курсты оқисыз</b><small>1 ай · 60 видеосабақ, сұрақтарға жауап</small></div></li>
-        <li><span class="dot">2</span><div><b>Жұмысқа кіресіз</b><small>стажировкасыз, ВОП болып</small></div></li>
-        <li class="hot"><span class="dot">3</span><div><b>Алғашқы жұмыс күндері</b><small>куратор WhatsApp-та қасыңызда: пациент, КМИС, құжат</small></div></li>
-        <li><span class="dot">4</span><div><b>1-айлық</b><small>сүйемелдеу жалғасады</small></div></li>
-        <li class="win"><span class="dot">✓</span><div><b>2-айлық</b><small>өз бетіңізше сенімді жұмыс істейсіз</small></div></li>
-      </ol>
-
-      <div class="g-perks">
-        <div><b>Жұмыстағы сұрақтар</b><span>жауап аласыз</span></div>
-        <div><b>Қиын жағдай</b><span>кеңес береміз</span></div>
-        <div><b>Құжаттама</b><span>бірге тексереміз</span></div>
+      <div class="cover">
+        <div class="cv-track">
+          <div class="cv-seg"><b>Оқу</b><small>1 ай</small></div>
+          <div class="cv-seg"><b>Жұмыс</b><small>1-айлық</small></div>
+          <div class="cv-seg win"><b>2-айлық</b><small>✓</small></div>
+        </div>
+        <div class="cv-bar"><span>Куратор қасыңызда</span></div>
       </div>
+
+      <h3 class="g-how">Қалай жұмыс істейді?</h3>
+      <ol class="how3">
+        <li><span>1</span><div><b>Курсқа кіресіз</b><small>сізді куратормен WhatsApp-та байланыстырамыз</small></div></li>
+        <li><span>2</span><div><b>Сұрағыңызды жазасыз</b><small>оқу, пациент, КМИС, құжат — куратор жауап береді</small></div></li>
+        <li><span>3</span><div><b>2-айлық алғанша</b><small>жұмыста өз бетіңізше сенімді болғанша қасыңыздамыз</small></div></li>
+      </ol>
       <button class="btn pulse" type="button" data-open>Сүйемелдеумен оқу</button>
     </div>
   </div>
@@ -678,11 +703,11 @@ footer{padding:28px 0 130px;color:var(--muted);font-size:13px;text-align:center}
   <div class="wrap">
     <span class="tag">Тарифтер</span>
     <h2 class="H sec-title">Өзіңізге ыңғайлы <span class="acc">тарифті</span> таңдаңыз</h2>
-    <p class="sec-sub">Барлық тарифте: 60 видеосабақ, 2 модуль, бонустар, 1 жыл доступ · Kaspi 0-0-12</p>
+    <p class="sec-sub">Барлық тарифте: 60 видеосабақ, 2 модуль, бонустар, 1 жыл доступ, <b class="ok-t">2 айлық алғанша куратор</b> · Kaspi 0-0-12</p>
     <div class="plans">
       <div class="plan">
         <h3 class="H">Стандарт</h3>
-        <p class="for">Өз бетімен оқуға дайындарға</p>
+        <p class="for">Куратормен оқу</p>
         <div class="month"><span class="kbadge">Kaspi 0-0-12</span><div class="price">20 833 <small>₸/ай</small></div></div>
         <p class="full">немесе <b>250 000 ₸</b> бірден</p>
         <ul class="feat">
@@ -690,31 +715,32 @@ footer{padding:28px 0 130px;color:var(--muted);font-size:13px;text-align:center}
           <li>2-модуль: 25 нозология</li>
           <li>Барлық бонустар</li>
           <li>Ортақ чат</li>
+          <li class="cur">Куратор: 2 айлық алғанша кері байланыс</li>
         </ul>
         <button class="btn ghost" type="button" data-open data-tariff="Стандарт">Алдын ала жазылу</button>
       </div>
       <div class="plan pop">
         <span class="flag">Ең көп таңдалады</span>
         <h3 class="H">ВИП</h3>
-        <p class="for">Сұрақтарыңызға жауап алып оқу</p>
+        <p class="for">Куратор + Элнора ортақ чатта</p>
         <div class="month"><span class="kbadge">Kaspi 0-0-12</span><div class="price">29 167 <small>₸/ай</small></div></div>
         <p class="full">немесе <b>350 000 ₸</b> бірден</p>
         <ul class="feat">
           <li>Стандарттағы барлығы</li>
-          <li class="plus">Куратордан кері байланыс</li>
+          <li class="cur">Куратор: 2 айлық алғанша кері байланыс</li>
           <li class="plus">Элнорадан кері байланыс ортақ чатта</li>
         </ul>
         <button class="btn" type="button" data-open data-tariff="ВИП">Алдын ала жазылу</button>
       </div>
       <div class="plan">
         <h3 class="H">Жеке</h3>
-        <p class="for">Жұмысқа кіргенше жеке сүйемелдеу</p>
+        <p class="for">Элнорамен жеке байланыс</p>
         <div class="month"><span class="kbadge">Kaspi 0-0-12</span><div class="price">33 333 <small>₸/ай</small></div></div>
         <p class="full">немесе <b>400 000 ₸</b> бірден</p>
         <ul class="feat">
           <li>Стандарттағы барлығы</li>
-          <li class="plus">Жеке кері байланыс WhatsApp арқылы</li>
-          <li class="plus">Алғашқы жалақыңызды алғанша сүйемелдеу</li>
+          <li class="cur">Куратор: 2 айлық алғанша кері байланыс</li>
+          <li class="plus">Элнорадан жеке кері байланыс WhatsApp арқылы</li>
         </ul>
         <button class="btn ghost" type="button" data-open data-tariff="Жеке">Алдын ала жазылу</button>
       </div>
@@ -767,6 +793,8 @@ footer{padding:28px 0 130px;color:var(--muted);font-size:13px;text-align:center}
       <details><summary>Алдын ала жазылу деген не?</summary><p>Жаңа ағынға орыныңызды брондайсыз. Ағын ашылғанда менеджер WhatsApp арқылы хабарласып, тарифті және төлем жолын түсіндіреді.</p></details>
       <details><summary>Курс қалай өтеді?</summary><p>Онлайн: 60 видеосабақ, өзіңізге ыңғайлы уақытта қарайсыз. Сұрақтарға чатта, ал ВИП және Жеке тарифтерде жеке жауап беріледі.</p></details>
       <details><summary>Доступ қанша уақытқа беріледі?</summary><p>1 жылға. Сабақтарды қанша рет болса да қайталап көре аласыз.</p></details>
+      <details><summary>Куратор деген кім, қалай көмектеседі?</summary><p>Куратор — курстағы тәжірибелі дәрігер. Оқу кезінде және жұмысқа кіргеннен кейін WhatsApp арқылы сұрақтарыңызға жауап береді: пациент, КМИС, құжаттама. Екінші жалақыңызды алғанша қасыңызда болады.</p></details>
+      <details><summary>Сүйемелдеу қай тарифте бар?</summary><p>Барлық үш тарифте. Айырмашылығы: ВИП-те Элнора ортақ чатта жауап береді, Жеке тарифте — WhatsApp арқылы жеке.</p></details>
       <details><summary>Рассрочка бар ма?</summary><p>Иә, Kaspi арқылы 0-0-12: 12 айға бөліп төлейсіз, үстеме ақысыз. Мысалы, Стандарт тариф — айына 20 833 ₸.</p></details>
       <details><summary>Ұзақ уақыт жұмыс істемедім, түсінемін бе?</summary><p>Иә. Курс 0-ден құрылған: 10 жыл декретте болған оқушымыз 1 айда оқып, жұмысқа кірді.</p></details>
     </div>
