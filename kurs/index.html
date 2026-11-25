@@ -1,0 +1,720 @@
+<!doctype html>
+<html lang="kk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ВОП жұмысы курсы · 0-ден 1 айда</title>
+<meta name="description" content="ВОП жұмысын 0-ден 1 айда меңгеріп, стажировкасыз жұмысқа кіріңіз. 60 видеосабақ, КМИС, приказдар, 25 нозология. Автор — Абдиева Элнора.">
+<meta property="og:title" content="ВОП жұмысы курсы · 0-ден 1 айда">
+<meta property="og:description" content="60 видеосабақ, КМИС, приказдар, 25 нозология, WhatsApp арқылы жеке кері байланыс. Алдын ала жазылыңыз.">
+<meta property="og:image" content="../assets/elnora-hero.png">
+<meta name="theme-color" content="#0b0f17">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0f17; --bg2:#111723; --card:#161d2b; --card2:#1c2536;
+  --line:rgba(255,255,255,.08); --text:#f4f7fb; --muted:#9aa6b8; --soft:#c6d0de;
+  --acc:#5ee1ff; --acc2:#22b8f0; --acc-ink:#03202b; --acc-soft:rgba(94,225,255,.12);
+  --ok:#4ade80; --gold:#ffcf5a; --red:#ff4d5e;
+  --max:1080px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--text);font:400 16px/1.55 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:hidden}
+body.lock{overflow:hidden}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 16px}
+.H{font-family:Montserrat,Inter,sans-serif;font-weight:800;text-transform:uppercase;line-height:1.08;letter-spacing:-.005em}
+.acc{color:var(--acc)}
+.nw{white-space:nowrap}
+section{padding:52px 0}
+.sec-title{font-size:clamp(27px,7vw,44px);text-align:center;margin-bottom:10px;text-wrap:balance}
+.sec-sub{text-align:center;color:var(--muted);margin:0 auto 28px;max-width:560px;font-size:15px}
+.tag{display:block;width:fit-content;margin:0 auto 12px;font:800 11px/1 Montserrat,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);background:var(--acc-soft);border:1px solid rgba(94,225,255,.3);padding:7px 12px;border-radius:999px}
+
+/* button */
+.btn{position:relative;display:flex;align-items:center;justify-content:center;gap:12px;width:100%;text-align:center;border:0;cursor:pointer;text-decoration:none;
+  font:900 18px/1.15 Montserrat,sans-serif;text-transform:uppercase;letter-spacing:.01em;color:var(--acc-ink);
+  padding:21px 24px;border-radius:999px;background:linear-gradient(180deg,#9ff0ff,var(--acc) 45%,var(--acc2));
+  box-shadow:0 14px 40px -10px rgba(94,225,255,.6),inset 0 2px 0 rgba(255,255,255,.55);transition:transform .15s;-webkit-tap-highlight-color:transparent}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(1px) scale(.99)}
+.btn svg{width:22px;height:22px;flex:none}
+.btn.ghost{background:transparent;color:var(--acc);border:1.5px solid rgba(94,225,255,.5);box-shadow:none}
+.btn.pulse::after{content:"";position:absolute;inset:0;border-radius:inherit;animation:pulse 2.2s infinite;pointer-events:none}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(94,225,255,.5)}70%{box-shadow:0 0 0 18px rgba(94,225,255,0)}100%{box-shadow:0 0 0 0 rgba(94,225,255,0)}}
+.cta-box{max-width:520px;margin:28px auto 0}
+.cta-note{text-align:center;color:var(--muted);font-size:13px;margin-top:10px}
+
+/* ===== HERO ===== */
+.hero{position:relative;padding:14px 0 8px;overflow:hidden;
+  background:radial-gradient(90% 55% at 50% 62%,rgba(34,184,240,.26),transparent 70%),radial-gradient(60% 40% at 50% 0%,rgba(94,225,255,.10),transparent 70%)}
+.topbar{display:flex;align-items:center;width:fit-content;max-width:100%;margin:0 auto;padding:3px 12px 3px 3px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12)}
+.topbar .new{font:800 9.5px/1 Montserrat,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#052e16;background:var(--ok);padding:5px 8px;border-radius:999px}
+.topbar .sep{width:1px;height:12px;background:rgba(255,255,255,.2);margin:0 9px}
+.topbar b{font:500 11.5px/1.2 Inter,sans-serif;color:var(--muted);white-space:nowrap}
+.hero h1{display:flex;flex-direction:column;align-items:center;gap:6px;margin:16px auto 0;text-align:center;font-family:Montserrat,Inter,sans-serif}
+.h1-top{font-weight:800;font-size:clamp(21px,6vw,38px);line-height:1.12;color:#fff;letter-spacing:-.01em;text-wrap:balance}
+.h1-big{font-weight:900;font-size:clamp(50px,15vw,112px);line-height:.92;letter-spacing:-.035em;padding:0 .04em .04em;
+  background:linear-gradient(180deg,#fff 8%,#a8f2ff 48%,#2fb6f2 100%);-webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 0 22px rgba(94,225,255,.5)) drop-shadow(0 6px 18px rgba(0,0,0,.45))}
+.h1-pill{position:relative;overflow:hidden;display:inline-block;margin-top:4px;font-weight:800;font-size:clamp(16px,4.8vw,28px);line-height:1.15;
+  color:var(--acc-ink);background:linear-gradient(90deg,#b4f4ff,#5ee1ff 55%,#2fb6f2);padding:9px 18px 10px;border-radius:999px;white-space:nowrap;
+  box-shadow:0 0 0 1px rgba(255,255,255,.35) inset,0 10px 34px -8px rgba(94,225,255,.75)}
+.h1-pill::after{content:"";position:absolute;top:0;bottom:0;left:-40%;width:35%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.75),transparent);transform:skewX(-20deg);animation:shine 3.2s ease-in-out infinite}
+@keyframes shine{0%,55%{left:-40%}100%{left:130%}}
+.h1-sub{text-align:center;margin-top:10px;font-size:13.5px;font-weight:600;color:var(--soft);letter-spacing:.01em}
+.stage{position:relative;max-width:560px;margin:14px auto 0;height:clamp(290px,47svh,470px)}
+.stage::before{content:"";position:absolute;left:50%;top:6%;transform:translateX(-50%);width:min(100%,420px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 50% 42%,rgba(56,160,255,.42),rgba(20,70,160,.18) 48%,transparent 70%)}
+.person{position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:100%;height:100%;z-index:1;-webkit-mask-image:linear-gradient(180deg,#000 74%,transparent 100%);mask-image:linear-gradient(180deg,#000 74%,transparent 100%)}
+.person img{width:100%;height:100%;object-fit:contain;object-position:bottom center;filter:drop-shadow(0 20px 40px rgba(0,0,0,.45))}
+.chip{position:absolute;z-index:2;max-width:46%;background:rgba(18,26,40,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(94,225,255,.3);border-radius:12px;padding:6px 9px 7px;box-shadow:0 10px 26px -10px rgba(0,0,0,.75);animation:float 6s ease-in-out infinite}
+.chip::before{content:"";position:absolute;top:-5px;right:12px;width:9px;height:9px;border-radius:50%;background:var(--acc);box-shadow:0 0 10px var(--acc)}
+.chip small{display:block;font:700 8.5px/1.2 Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.chip b{display:block;font:900 15px/1.1 Montserrat,sans-serif;color:var(--ok);margin-top:2px;white-space:nowrap}
+.chip span{display:block;font-size:9.5px;line-height:1.25;color:var(--soft);margin-top:2px}
+.c1{left:0;top:4%}.c2{right:0;top:11%;animation-delay:-1s}.c3{left:0;top:33%;animation-delay:-2s}.c4{right:0;top:40%;animation-delay:-3s}.c5{left:0;top:60%;animation-delay:-4s}.c6{right:0;top:67%;animation-delay:-5s}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+.hero .cta-box{margin-top:-34px;position:relative;z-index:3}
+
+/* ===== NUMBERS ===== */
+.nums{display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:640px;margin:0 auto}
+.num{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:16px 14px}
+.num b{display:block;font:900 30px/1 Montserrat,sans-serif;color:var(--acc)}
+.num span{display:block;margin-top:6px;font-size:14px;color:var(--soft);line-height:1.35}
+
+/* ===== WHO / PAIN ===== */
+.who{display:grid;gap:10px;max-width:640px;margin:0 auto}
+.w{display:flex;gap:14px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px 16px}
+.w .e{flex:none;width:44px;height:44px;border-radius:14px;background:var(--acc-soft);display:grid;place-items:center;font-size:22px}
+.w b{display:block;font-size:16px;line-height:1.3}
+.w span{display:block;font-size:13.5px;color:var(--muted);margin-top:2px}
+
+.paths{display:grid;gap:12px;max-width:640px;margin:28px auto 0}
+.path{border-radius:22px;padding:18px;border:1px solid var(--line);background:var(--card)}
+.path h3{font-size:15px;margin-bottom:10px}
+.path ul{list-style:none;display:grid;gap:8px}
+.path li{display:flex;justify-content:space-between;gap:10px;font-size:14.5px;color:var(--soft)}
+.path li b{white-space:nowrap}
+.path.bad h3{color:#ff8a95}.path.bad li b{color:#ff8a95}
+.path.good{border-color:rgba(94,225,255,.4);background:linear-gradient(180deg,rgba(94,225,255,.10),var(--card))}
+.path.good h3{color:var(--acc)}.path.good li b{color:var(--ok)}
+
+/* ===== MODULES ===== */
+.mods{display:grid;gap:28px;max-width:720px;margin:0 auto}
+.mod{position:relative;background:var(--card);border:1px solid var(--line);border-radius:28px;padding:30px 18px 18px}
+.mod-tab{position:absolute;top:-15px;left:18px;background:var(--acc);color:var(--acc-ink);font:800 13px/1 Montserrat,sans-serif;padding:9px 16px;border-radius:999px;letter-spacing:.04em}
+.mod-count{position:absolute;top:-15px;right:18px;background:#0b0f17;border:1px solid rgba(94,225,255,.4);color:var(--acc);font:700 12px/1 Inter,sans-serif;padding:9px 12px;border-radius:999px}
+.mod h3{font-size:clamp(20px,5.6vw,28px);margin:8px 0 6px}
+.mod > p{color:var(--muted);font-size:14.5px;margin-bottom:16px}
+.topics{list-style:none;display:grid;gap:8px;counter-reset:t}
+.topics li{counter-increment:t;display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.4;color:#e2e8f0;padding:10px 12px;background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:12px}
+.topics li::before{content:counter(t,decimal-leading-zero);flex:none;font:800 12px/1.6 Montserrat,sans-serif;color:var(--acc);min-width:22px}
+.topics li.more{display:none}
+.mod.open .topics li.more{display:flex}
+.toggle{margin-top:12px;width:100%;background:transparent;border:1px dashed rgba(94,225,255,.4);color:var(--acc);font:700 14px/1 Inter,sans-serif;padding:13px;border-radius:12px;cursor:pointer}
+.mod-bonus{margin-top:14px;display:flex;gap:10px;align-items:center;background:rgba(255,207,90,.08);border:1px solid rgba(255,207,90,.35);border-radius:14px;padding:12px 14px;font-size:14px;color:#ffe7a8}
+.mod-bonus b{color:var(--gold)}
+
+/* ===== BONUSES ===== */
+.bon{display:grid;gap:10px;max-width:640px;margin:0 auto}
+.b{display:flex;gap:14px;align-items:center;background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:18px;padding:14px 16px}
+.b .i{flex:none;width:48px;height:48px;border-radius:14px;background:rgba(255,207,90,.12);display:grid;place-items:center;font-size:24px}
+.b small{display:block;font:800 10px/1 Montserrat,sans-serif;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:5px}
+.b b{font-size:15.5px;line-height:1.3}
+
+/* ===== AFTER ===== */
+.after{display:grid;gap:10px;max-width:640px;margin:0 auto}
+.a{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 16px;font-size:15.5px;line-height:1.4}
+.a::before{content:"";flex:none;width:24px;height:24px;margin-top:1px;border-radius:7px;background:var(--ok) no-repeat center/14px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23052e16' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 12.5l5 5L20 6.5'/%3E%3C/svg%3E")}
+.income{max-width:640px;margin:22px auto 0;border-radius:24px;overflow:hidden;border:1px solid rgba(74,222,128,.35);background:linear-gradient(180deg,rgba(74,222,128,.10),var(--card))}
+.income h3{font-size:15px;padding:16px 18px 6px;color:var(--ok)}
+.income .row{display:flex;justify-content:space-between;gap:12px;padding:12px 18px;border-top:1px solid var(--line);font-size:15px;color:var(--soft)}
+.income .row b{font:800 16px/1.2 Montserrat,sans-serif;color:#fff;white-space:nowrap;font-variant-numeric:tabular-nums}
+.income .note{padding:10px 18px 16px;font-size:12px;color:var(--muted)}
+
+/* ===== CASES + REVIEWS ===== */
+.cases{display:grid;gap:12px;max-width:720px;margin:0 auto}
+.case{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:16px;display:flex;gap:14px;align-items:flex-start}
+.av{flex:none;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font:900 17px/1 Montserrat,sans-serif;background:var(--acc);color:var(--acc-ink)}
+.case h4{font-size:15px}
+.case h4 small{color:var(--muted);font-weight:500;font-size:12.5px}
+.case .big{font:900 19px/1.2 Montserrat,sans-serif;margin-top:4px}
+.case .big em{font-style:normal;color:var(--ok)}
+.rail{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 16px 18px;margin:26px -16px 0;scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.rev{flex:0 0 78%;max-width:300px;scroll-snap-align:center;background:var(--card);border:1.5px solid rgba(94,225,255,.3);border-radius:22px;overflow:hidden}
+.rev-h{display:flex;align-items:center;gap:10px;padding:12px 14px}
+.rev-h .av{width:36px;height:36px;font-size:14px}
+.rev-h b{display:block;font-size:15px;line-height:1.2}
+.rev-h small{color:var(--muted);font-size:12px}
+.rev-h .stars{margin-left:auto;color:#ffd24d;font-size:11px;letter-spacing:1px}
+.shot{all:unset;position:relative;display:block;cursor:zoom-in;margin:0 10px 10px;border-radius:16px;overflow:hidden;aspect-ratio:4/5;background:#e9edf2}
+.shot img{width:100%;height:100%;object-fit:cover;object-position:top}
+.badge{position:absolute;left:8px;top:8px;z-index:1;background:var(--ok);color:#052e16;font:900 12px/1 Montserrat,sans-serif;padding:7px 10px;border-radius:999px}
+.hint{text-align:center;color:var(--muted);font-size:12.5px}
+.lightbox{position:fixed;inset:0;z-index:80;background:rgba(0,0,0,.94);display:none;align-items:center;justify-content:center;padding:16px}
+.lightbox.open{display:flex}
+.lightbox img{max-height:92vh;width:auto;border-radius:14px}
+
+/* ===== PRICING ===== */
+.plans{display:grid;gap:16px;max-width:1000px;margin:0 auto}
+.plan{position:relative;background:var(--card);border:1px solid var(--line);border-radius:26px;padding:24px 20px 20px;display:flex;flex-direction:column}
+.plan.pop{border:1.5px solid var(--acc);background:linear-gradient(180deg,rgba(94,225,255,.12),var(--card) 45%);box-shadow:0 20px 60px -24px rgba(94,225,255,.55)}
+.plan .flag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--acc);color:var(--acc-ink);font:800 11px/1 Montserrat,sans-serif;letter-spacing:.1em;text-transform:uppercase;padding:8px 12px;border-radius:999px;white-space:nowrap}
+.plan h3{font-size:22px}
+.plan .for{color:var(--muted);font-size:13.5px;margin-top:4px}
+.price{margin:16px 0 4px;font:900 36px/1 Montserrat,sans-serif;font-variant-numeric:tabular-nums}
+.price small{font-size:18px;font-weight:800;color:var(--muted)}
+.kaspi{font-size:13px;color:var(--soft)}
+.kaspi b{color:#ff6b6b}
+.feat{list-style:none;display:grid;gap:9px;margin:16px 0 20px;flex:1}
+.feat li{display:flex;gap:10px;font-size:14.5px;line-height:1.35;color:#e2e8f0}
+.feat li::before{content:"✓";flex:none;width:20px;height:20px;border-radius:6px;display:grid;place-items:center;font-size:12px;font-weight:900;background:var(--acc-soft);color:var(--acc)}
+.feat li.plus::before{content:"+";background:rgba(74,222,128,.15);color:var(--ok)}
+.feat li.plus{color:#fff;font-weight:600}
+.plan .btn{font-size:16px;padding:17px}
+.worth{max-width:720px;margin:26px auto 0;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:18px}
+.worth h3{font-size:15px;margin-bottom:10px}
+.worth .grid{display:grid;grid-template-columns:1fr;gap:0 14px}
+.worth .grid > div{min-width:0}
+.worth .grid div{display:flex;justify-content:space-between;gap:8px;font-size:13.5px;color:var(--soft);padding:6px 0;border-bottom:1px dashed var(--line)}
+.worth .grid b{color:#fff;white-space:nowrap;font-variant-numeric:tabular-nums}
+.worth .sum{margin-top:12px;display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:700}
+.worth .sum b{font:900 20px/1 Montserrat,sans-serif;color:var(--gold)}
+
+/* ===== SPEAKER ===== */
+.spk{max-width:720px;margin:0 auto;background:var(--card);border:1px solid var(--line);border-radius:28px;overflow:hidden}
+.spk-photo{position:relative;height:300px;background:radial-gradient(70% 60% at 50% 40%,#1d5fb0,#0b2552 70%,#081a3b);overflow:hidden}
+.spk-photo img{position:absolute;left:50%;bottom:0;transform:translateX(-50%);height:100%;width:auto;max-width:none}
+.spk-photo::after{content:"";position:absolute;inset:auto 0 0 0;height:40%;background:linear-gradient(180deg,transparent,var(--card))}
+.spk-body{padding:0 20px 22px;margin-top:-40px;position:relative;z-index:1}
+.spk-body small{color:var(--muted)}
+.spk-body h2{font-size:clamp(26px,7vw,40px);margin:4px 0 18px}
+.spk-stats{display:grid;grid-template-columns:1fr 1fr;gap:16px 14px}
+.spk-stats b{display:block;font:900 24px/1 Montserrat,sans-serif}
+.spk-stats span{font-size:13px;color:var(--muted)}
+.spk q{display:block;margin-top:18px;padding-top:16px;border-top:1px solid var(--line);font-style:italic;color:#e2e8f0}
+
+/* ===== FAQ ===== */
+.faq{display:grid;gap:10px;max-width:720px;margin:0 auto}
+details{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:0 16px}
+summary{list-style:none;cursor:pointer;padding:16px 0;font-weight:700;display:flex;justify-content:space-between;gap:14px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";flex:none;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--acc-soft);color:var(--acc);font-size:20px;transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding:0 0 16px;color:var(--soft);font-size:15px}
+
+.final{text-align:center;background:radial-gradient(90% 70% at 50% 0%,rgba(34,184,240,.22),transparent 70%),var(--bg2);border-top:1px solid var(--line)}
+.final h2{font-size:clamp(27px,7vw,44px);max-width:720px;margin:0 auto}
+.final p{color:var(--soft);margin:12px auto 0;max-width:480px}
+footer{padding:28px 0 130px;color:var(--muted);font-size:13px;text-align:center}
+
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:40;padding:10px 16px calc(12px + env(safe-area-inset-bottom));background:linear-gradient(180deg,transparent,rgba(11,15,23,.92) 35%);transition:transform .25s}
+.sticky .btn{max-width:520px;margin:0 auto;padding:19px;font-size:16px}
+.sticky.hide{transform:translateY(120%)}
+
+/* ===== MODAL ===== */
+.modal{position:fixed;inset:0;z-index:70;display:flex;align-items:flex-end;justify-content:center;visibility:hidden;pointer-events:none;transition:visibility 0s .32s}
+.modal.open{visibility:visible;pointer-events:auto;transition:none}
+.scrim{position:absolute;inset:0;background:rgba(3,6,12,.72);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);opacity:0;transition:opacity .25s}
+.modal.open .scrim{opacity:1}
+.sheet{position:relative;width:100%;max-width:520px;max-height:92vh;overflow:auto;background:linear-gradient(180deg,#1b2536,#121927);border:1.5px solid rgba(94,225,255,.35);border-bottom:0;border-radius:28px 28px 0 0;padding:14px 18px calc(22px + env(safe-area-inset-bottom));transform:translateY(105%);transition:transform .32s cubic-bezier(.2,.9,.25,1)}
+.modal.open .sheet{transform:none}
+.grab{width:44px;height:5px;border-radius:3px;background:rgba(255,255,255,.22);margin:0 auto 14px}
+.close{position:absolute;top:12px;right:12px;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:rgba(255,255,255,.05);color:#fff;font-size:18px;cursor:pointer}
+.sheet h2{font-size:clamp(22px,6vw,28px);text-align:center}
+.sheet .sub{text-align:center;color:var(--muted);margin:8px 0 16px;font-size:14px}
+.field{display:flex;flex-direction:column;gap:7px;margin-bottom:12px}
+.field label{font-size:14px;font-weight:600;color:var(--soft)}
+.field input{width:100%;font:500 17px/1.2 Inter,sans-serif;color:var(--text);background:#0d131e;border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:16px;outline:none}
+.field input:focus{border-color:var(--acc);box-shadow:0 0 0 4px rgba(94,225,255,.16)}
+.field.invalid input{border-color:var(--red)}
+.err{color:#ff8a95;font-size:13px;display:none}
+.field.invalid .err{display:block}
+.tariffs{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.tariffs label{position:relative;cursor:pointer}
+.tariffs input{position:absolute;opacity:0}
+.tariffs span{display:block;text-align:center;padding:12px 8px;border-radius:14px;border:1px solid rgba(255,255,255,.14);background:#0d131e;font-size:14px;font-weight:700;color:var(--soft)}
+.tariffs span small{display:block;font-weight:500;font-size:12px;color:var(--muted);margin-top:2px}
+.tariffs input:checked + span{border-color:var(--acc);background:var(--acc-soft);color:#fff}
+.agree{font-size:12px;color:var(--muted);text-align:center;margin-top:12px}
+.ok{display:none;text-align:center;padding:16px 0 6px}
+.ok .check{width:76px;height:76px;border-radius:50%;margin:0 auto 16px;display:grid;place-items:center;background:var(--acc);color:var(--acc-ink);font-size:38px;font-weight:900}
+.ok h3{font-size:24px;margin-bottom:8px}
+.ok p{color:var(--soft)}
+
+@media (min-width:560px){
+  .worth .grid{grid-template-columns:1fr 1fr}
+  .chip{max-width:none;border-radius:14px;padding:9px 12px 10px}
+  .chip::before{width:12px;height:12px;top:-6px;right:14px}
+  .chip small{font-size:10.5px}.chip b{font-size:20px}.chip span{font-size:12px}
+}
+@media (min-width:760px){
+  section{padding:80px 0}
+  .stage{height:clamp(300px,46vh,470px)}
+  .nums{grid-template-columns:repeat(4,1fr);max-width:none}
+  .who{grid-template-columns:1fr 1fr;max-width:none}
+  .paths{grid-template-columns:1fr 1fr;max-width:none}
+  .topics{grid-template-columns:1fr 1fr}
+  .mods{max-width:none}
+  .bon{grid-template-columns:1fr 1fr;max-width:none}
+  .after{grid-template-columns:1fr 1fr;max-width:none}
+  .cases{grid-template-columns:1fr 1fr}
+  .plans{grid-template-columns:repeat(3,1fr);align-items:stretch}
+  .plan.pop{transform:translateY(-10px)}
+  .rev{flex-basis:290px}
+  .spk{display:grid;grid-template-columns:1fr 1.15fr;align-items:center}
+  .spk-photo{height:100%;min-height:420px}.spk-photo::after{display:none}
+  .spk-body{margin:0;padding:32px}
+  .modal{align-items:center}
+  .sheet{border-radius:28px;border-bottom:1.5px solid rgba(94,225,255,.35);padding:26px 28px;transform:translateY(24px) scale(.97);opacity:0;transition:transform .25s,opacity .25s}
+  .modal.open .sheet{transform:none;opacity:1}
+  .grab{display:none}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<main>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="wrap">
+    <div class="topbar"><span class="new">Жаңа ағын</span><span class="sep"></span><b>Алдын ала жазылу ашық</b></div>
+    <h1>
+      <span class="h1-top">ВОП жұмысын 0-ден</span>
+      <span class="h1-big">1 айда</span>
+      <span class="h1-pill">меңгеріп, жұмысқа кіріңіз</span>
+    </h1>
+    <p class="h1-sub">Стажировкасыз · 60 видеосабақ · 1 жыл доступ</p>
+    <div class="stage">
+      <div class="person"><img src="../assets/elnora-hero.png" alt="Абдиева Элнора — курс авторы" fetchpriority="high"></div>
+      <div class="chip c1"><small>Сабақ</small><b>60 видео</b><span>КМИС · приказ · ем</span></div>
+      <div class="chip c2"><small>Айкерім</small><b>437 000 ₸</b><span>жалақы · 2 участок</span></div>
+      <div class="chip c3"><small>Доступ</small><b>1 жыл</b><span>қайталап көресіз</span></div>
+      <div class="chip c4"><small>Гүльнара</small><b>1,5 млн ₸</b><span>5 айда табыс</span></div>
+      <div class="chip c5"><small>Кері байланыс</small><b>WhatsApp</b><span>жалақы алғанша</span></div>
+      <div class="chip c6"><small>Оқушылар</small><b>500+</b><span>ВОП дайындадым</span></div>
+    </div>
+    <div class="cta-box">
+      <button class="btn pulse" type="button" data-open>Алдын ала жазылу
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      <p class="cta-note">Жаңа ағынға орын брондау · менеджер WhatsApp-қа жазады</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NUMBERS ===== -->
+<section style="padding-top:32px">
+  <div class="wrap">
+    <div class="nums">
+      <div class="num"><b>60</b><span>видеосабақ</span></div>
+      <div class="num"><b>47</b><span>практикалық және клиникалық тақырып</span></div>
+      <div class="num"><b>1 жыл</b><span>курсқа доступ</span></div>
+      <div class="num"><b>5</b><span>бонус: ем схемалары, шаблондар</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHO ===== -->
+<section id="who" style="padding-top:0">
+  <div class="wrap">
+    <span class="tag">Кімге арналған</span>
+    <h2 class="H sec-title">Курс <span class="acc">сізге</span> арналған, егер</h2>
+    <p class="sec-sub">Кез келген деңгейдегі дәрігерге бейімделген</p>
+    <div class="who">
+      <div class="w"><div class="e">🎓</div><div><b>Интернатурада немесе резидентурада оқисыз</b><span>жұмысқа дайын болып шыққыңыз келеді</span></div></div>
+      <div class="w"><div class="e">👶</div><div><b>Декреттен шығып жатырсыз</b><span>білім ұмытылды, қайта бастау қорқынышты</span></div></div>
+      <div class="w"><div class="e">💻</div><div><b>КМИС пен приказдарды білмейсіз</b><span>құжаттама мен айыппұлдан қорқасыз</span></div></div>
+      <div class="w"><div class="e">🩺</div><div><b>ВОП болып жұмыс істеп жүрсіз</b><span>білімді жүйелеп, сенімді болғыңыз келеді</span></div></div>
+    </div>
+
+    <div class="paths">
+      <div class="path bad">
+        <h3>❌ Өзіңіз оқысаңыз</h3>
+        <ul>
+          <li>3 ай дайындық <b>−750 000 ₸</b></li>
+          <li>6 ай дайындық <b>−1 500 000 ₸</b></li>
+          <li>+ 2 ай стажировка <b>−500 000 ₸</b></li>
+        </ul>
+      </div>
+      <div class="path good">
+        <h3>✅ Курспен</h3>
+        <ul>
+          <li>Бәрін оқу <b>1 айда</b></li>
+          <li>Жұмысқа кіру <b>стажировкасыз</b></li>
+          <li>Бірінші айлық <b>250–450 мың ₸</b></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MODULES ===== -->
+<section id="program" style="padding-top:0">
+  <div class="wrap">
+    <span class="tag">Бағдарлама</span>
+    <h2 class="H sec-title">Курста <span class="acc">не үйренесіз</span></h2>
+    <p class="sec-sub">2 модуль · 47 тақырып · әр сабақ практикамен</p>
+    <div class="mods">
+      <article class="mod" id="m1">
+        <span class="mod-tab">1-модуль</span><span class="mod-count">22 тақырып</span>
+        <h3 class="H">Приказдар, КМИС және <span class="acc">құжаттама</span></h3>
+        <p>Құжаттарды дұрыс толтырып, айыппұлсыз жұмыс істеуді үйренесіз</p>
+        <ul class="topics">
+          <li>ВОП дәрігер кім, қызметі</li>
+          <li>КМИС — толық, экраннан көрсетемін</li>
+          <li>49/90 приказ</li>
+          <li>КДУ направление, 37 приказ</li>
+          <li>198 приказ — больничный</li>
+          <li>106 приказ — госпитализация, портал</li>
+          <li class="more">Коммуникация, этика</li>
+          <li class="more">Скрининг</li>
+          <li class="more">ДКПН</li>
+          <li class="more">ЖФВ / прегравидарная подготовка</li>
+          <li class="more">Выписка жазу</li>
+          <li class="more">209 приказ</li>
+          <li class="more">116 приказ</li>
+          <li class="more">Справкалар (толық)</li>
+          <li class="more">ВТМУ — 238 приказ</li>
+          <li class="more">Диспансерлік бақылау / АЛО</li>
+          <li class="more">031 форма (МСЭК)</li>
+          <li class="more">214 приказ / туберкулез документациясы</li>
+          <li class="more">Актив, вызов, патронаж жабу</li>
+          <li class="more">Пациентті қабылдау, коммуникация</li>
+          <li class="more">ВОП практикасында ең жиі жасалатын әрекеттер</li>
+          <li class="more">Жиі кездесетін дефектілер мен айыппұлдан қорғану</li>
+        </ul>
+        <button class="toggle" type="button" data-more>Барлық 22 тақырыпты көру ↓</button>
+        <div class="mod-bonus">🎁 <span><b>Бонус:</b> шаблондар, КАГ және госпитализация перечні, 3 спикерден бонус сабақ</span></div>
+      </article>
+
+      <article class="mod" id="m2">
+        <span class="mod-tab">2-модуль</span><span class="mod-count">25 тақырып</span>
+        <h3 class="H">Ең жиі кездесетін <span class="acc">аурулар</span></h3>
+        <p>Амбулаторияда 95% жағдайда кездесетін нозологиялар: диагноз, ем, дозалар</p>
+        <ul class="topics">
+          <li>ОРВИ: ринит, фарингит, тонзиллит, отит, ларингит</li>
+          <li>Артериялық гипертензия, дәрілерді коррекциялау</li>
+          <li>Қант диабеті</li>
+          <li>Пневмония, бронхит</li>
+          <li>Анемия: балаларда, үлкендерде, жүктілерде</li>
+          <li>Сәбилердің физиологиялық және патологиялық жағдайлары</li>
+          <li class="more">Балаларда жөтел (ИБВД)</li>
+          <li class="more">Плеврит</li>
+          <li class="more">Бронх демікпесі</li>
+          <li class="more">ХОБЛ</li>
+          <li class="more">Остеохондроз</li>
+          <li class="more">Остеоартроз: гонартроз, коксартроз</li>
+          <li class="more">Созылмалы гастрит</li>
+          <li class="more">Ойық жара ауруы</li>
+          <li class="more">ГЭРБ</li>
+          <li class="more">Созылмалы холецистит</li>
+          <li class="more">Өттас ауруы</li>
+          <li class="more">Созылмалы панкреатит</li>
+          <li class="more">Запор: балаларда және үлкендерде</li>
+          <li class="more">Диарея, сусыздану</li>
+          <li class="more">Іш ауруы: дифференциалды диагностика</li>
+          <li class="more">Цистит</li>
+          <li class="more">Пиелонефрит</li>
+          <li class="more">Патронаж</li>
+          <li class="more">Бронхит: жедел және созылмалы</li>
+        </ul>
+        <button class="toggle" type="button" data-more>Барлық 25 тақырыпты көру ↓</button>
+        <div class="mod-bonus">🎁 <span><b>Бонус:</b> дайын ем схемасы кітабы, дәлелді медицина кітаптары каналы, чат</span></div>
+      </article>
+    </div>
+    <div class="cta-box"><button class="btn" type="button" data-open>Орнымды брондау</button></div>
+  </div>
+</section>
+
+<!-- ===== BONUSES ===== -->
+<section id="bonus" style="padding-top:0">
+  <div class="wrap">
+    <span class="tag">Бонустар</span>
+    <h2 class="H sec-title">Курспен бірге <span class="acc">аласыз</span></h2>
+    <p class="sec-sub">Күнделікті жұмыста қолданатын дайын құралдар</p>
+    <div class="bon">
+      <div class="b"><div class="i">📗</div><div><small>Бонус 01</small><b>Дайын ем схемасы кітабы</b></div></div>
+      <div class="b"><div class="i">📚</div><div><small>Бонус 02</small><b>Дәлелді медицина кітаптары каналы</b></div></div>
+      <div class="b"><div class="i">📄</div><div><small>Бонус 03</small><b>Құжаттар мен приказдарға дайын шаблондар</b></div></div>
+      <div class="b"><div class="i">🎥</div><div><small>Бонус 04</small><b>Спикерлерден 3 бонус сабақ: туберкулез, 37 приказ, ДКПН</b></div></div>
+      <div class="b"><div class="i">💬</div><div><small>Бонус 05</small><b>Оқушылар чаты — сұрақтарға жауап</b></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AFTER ===== -->
+<section id="after" style="padding-top:0">
+  <div class="wrap">
+    <span class="tag">Курстан кейін</span>
+    <h2 class="H sec-title">1 айдан кейін <span class="acc">сіз</span></h2>
+    <div class="after">
+      <div class="a">Стажировкасыз жұмысқа кіресіз, өзіңіз қабылдау жүргізесіз</div>
+      <div class="a">КМИС-те өзіңіз жұмыс істейсіз, ешкімнен сұрамайсыз</div>
+      <div class="a">Приказдарды білесіз, айыппұл мен ескертуден қорғаласыз</div>
+      <div class="a">25 жиі ауруға диагноз қойып, дәлелді медицинамен ем тағайындайсыз</div>
+      <div class="a">Анализдерді талдап, дозаларды жатқа білесіз</div>
+      <div class="a">Әріптестер алдында сенімдісіз, басшылық алдында абыройлысыз</div>
+    </div>
+    <div class="income">
+      <h3>💰 ВОП дәрігерінің табысы</h3>
+      <div class="row">1 участок — қалада<b>~250 000 ₸</b></div>
+      <div class="row">1 участок — ауылда<b>~300 000 ₸</b></div>
+      <div class="row">Кезекшілік<b>+100 000 ₸/ай</b></div>
+      <div class="row">1,5 ставка<b>350–450 мың ₸</b></div>
+      <div class="row">Көтерме ақы (ауылда)<b>5–10 млн ₸</b></div>
+      <p class="note">Сандар шамамен, өңір мен емханаға байланысты өзгереді.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CASES + REVIEWS ===== -->
+<section id="reviews" style="padding-top:0">
+  <div class="wrap">
+    <span class="tag">Нәтижелер</span>
+    <h2 class="H sec-title">Оқушыларымның <span class="acc">нәтижесі</span></h2>
+    <p class="sec-sub">Нақты оқушылар, нақты жалақы</p>
+    <div class="cases">
+      <div class="case"><div class="av">Г</div><div><h4>Гүльнара <small>· диплом алған бойда жұмысқа кірді</small></h4><div class="big">5 айда <em>1,5 млн ₸</em></div></div></div>
+      <div class="case"><div class="av">А</div><div><h4>Айкерім <small>· 1 айдан кейін 2 участок</small></h4><div class="big">Жалақы <em>437 000 ₸</em></div></div></div>
+      <div class="case"><div class="av">А</div><div><h4>Асел <small>· 10 жыл декреттен кейін</small></h4><div class="big"><em>1 айда</em> жұмысқа кірді</div></div></div>
+      <div class="case"><div class="av">С</div><div><h4>Салтанат <small>· Ресейде оқыған</small></h4><div class="big">КМИС-ті білмейтін, енді <em>әріптестеріне үйретеді</em></div></div></div>
+    </div>
+    <div class="rail" id="rail">
+      <figure class="rev"><div class="rev-h"><div class="av">А</div><div><b>Айкерім</b><small>курс оқушысы</small></div><span class="stars">★★★★★</span></div><button class="shot" type="button" data-src="../assets/rv/aikerim.jpg"><span class="badge">437 000 ₸</span><img src="../assets/rv/aikerim.jpg" alt="Айкерім пікірі" loading="lazy"></button></figure>
+      <figure class="rev"><div class="rev-h"><div class="av">Н</div><div><b>Нұрлы</b><small>Сентябрь ағыны</small></div><span class="stars">★★★★★</span></div><button class="shot" type="button" data-src="../assets/rv/nurly.jpg"><span class="badge">2 участок</span><img src="../assets/rv/nurly.jpg" alt="Нұрлы пікірі" loading="lazy"></button></figure>
+      <figure class="rev"><div class="rev-h"><div class="av">Д</div><div><b>Диас</b><small>Сентябрь ағыны</small></div><span class="stars">★★★★★</span></div><button class="shot" type="button" data-src="../assets/rv/dias.jpg"><span class="badge">313 217 ₸</span><img src="../assets/rv/dias.jpg" alt="Диас пікірі" loading="lazy"></button></figure>
+      <figure class="rev"><div class="rev-h"><div class="av">Д</div><div><b>Диляра</b><small>Август ағыны</small></div><span class="stars">★★★★★</span></div><button class="shot" type="button" data-src="../assets/rv/dilyara.jpg"><span class="badge">1-жалақы</span><img src="../assets/rv/dilyara.jpg" alt="Диляра пікірі" loading="lazy"></button></figure>
+      <figure class="rev"><div class="rev-h"><div class="av">Г</div><div><b>Гүльнара</b><small>Июль ағыны</small></div><span class="stars">★★★★★</span></div><button class="shot" type="button" data-src="../assets/rv/gulnara.jpg"><span class="badge">1,5 млн ₸</span><img src="../assets/rv/gulnara.jpg" alt="Гүльнара пікірі" loading="lazy"></button></figure>
+      <figure class="rev"><div class="rev-h"><div class="av">С</div><div><b>Салтанат</b><small>курс түлегі</small></div><span class="stars">★★★★★</span></div><button class="shot" type="button" data-src="../assets/rv/saltanat.jpg"><span class="badge">КМИС ✓</span><img src="../assets/rv/saltanat.jpg" alt="Салтанат пікірі" loading="lazy"></button></figure>
+      <figure class="rev"><div class="rev-h"><div class="av">Б</div><div><b>Балнұр</b><small>Май ағыны</small></div><span class="stars">★★★★★</span></div><button class="shot" type="button" data-src="../assets/rv/balnur.jpg"><span class="badge">Сенімділік</span><img src="../assets/rv/balnur.jpg" alt="Балнұр пікірі" loading="lazy"></button></figure>
+      <figure class="rev"><div class="rev-h"><div class="av">А</div><div><b>Асель</b><small>декреттен кейін</small></div><span class="stars">★★★★★</span></div><button class="shot" type="button" data-src="../assets/rv/asel.jpg"><span class="badge">1 айда жұмыс</span><img src="../assets/rv/asel.jpg" alt="Асель пікірі" loading="lazy"></button></figure>
+      <figure class="rev"><div class="rev-h"><div class="av">Н</div><div><b>Нұрсымбат</b><small>курс түлегі</small></div><span class="stars">★★★★★</span></div><button class="shot" type="button" data-src="../assets/rv/nursymbat.jpg"><span class="badge">Өзім қабылдаймын</span><img src="../assets/rv/nursymbat.jpg" alt="Нұрсымбат пікірі" loading="lazy"></button></figure>
+      <figure class="rev"><div class="rev-h"><div class="av">Н</div><div><b>Нұрай</b><small>Сентябрь ағыны</small></div><span class="stars">★★★★★</span></div><button class="shot" type="button" data-src="../assets/rv/nurai.jpg"><span class="badge">0% өкініш</span><img src="../assets/rv/nurai.jpg" alt="Нұрай пікірі" loading="lazy"></button></figure>
+    </div>
+    <p class="hint">← жылжытып қараңыз · басып үлкейтіңіз →</p>
+  </div>
+</section>
+
+<!-- ===== PRICING ===== -->
+<section id="price" style="padding-top:0">
+  <div class="wrap">
+    <span class="tag">Тарифтер</span>
+    <h2 class="H sec-title">Өзіңізге ыңғайлы <span class="acc">тарифті</span> таңдаңыз</h2>
+    <p class="sec-sub">Барлық тарифте: 60 видеосабақ, 2 модуль, бонустар, 1 жыл доступ</p>
+    <div class="plans">
+      <div class="plan">
+        <h3 class="H">Стандарт</h3>
+        <p class="for">Өз бетімен оқуға дайындарға</p>
+        <div class="price">250 000 <small>₸</small></div>
+        <p class="kaspi"><b>Kaspi</b> рассрочка 0-0-24 бар</p>
+        <ul class="feat">
+          <li>1-модуль: документация, КМИС, приказдар</li>
+          <li>2-модуль: 25 нозология</li>
+          <li>Барлық бонустар</li>
+          <li>Ортақ чат</li>
+        </ul>
+        <button class="btn ghost" type="button" data-open data-tariff="Стандарт">Алдын ала жазылу</button>
+      </div>
+      <div class="plan pop">
+        <span class="flag">Ең көп таңдалады</span>
+        <h3 class="H">ВИП</h3>
+        <p class="for">Сұрақтарыңызға жауап алып оқу</p>
+        <div class="price">350 000 <small>₸</small></div>
+        <p class="kaspi"><b>Kaspi</b> рассрочка 0-0-24 бар</p>
+        <ul class="feat">
+          <li>Стандарттағы барлығы</li>
+          <li class="plus">Куратордан кері байланыс</li>
+          <li class="plus">Элнорадан кері байланыс ортақ чатта</li>
+        </ul>
+        <button class="btn" type="button" data-open data-tariff="ВИП">Алдын ала жазылу</button>
+      </div>
+      <div class="plan">
+        <h3 class="H">Жеке</h3>
+        <p class="for">Жұмысқа кіргенше жеке сүйемелдеу</p>
+        <div class="price">400 000 <small>₸</small></div>
+        <p class="kaspi"><b>Kaspi</b> рассрочка 0-0-24 бар</p>
+        <ul class="feat">
+          <li>Стандарттағы барлығы</li>
+          <li class="plus">Жеке кері байланыс WhatsApp арқылы</li>
+          <li class="plus">Алғашқы жалақыңызды алғанша сүйемелдеу</li>
+        </ul>
+        <button class="btn ghost" type="button" data-open data-tariff="Жеке">Алдын ала жазылу</button>
+      </div>
+    </div>
+
+    <div class="worth">
+      <h3>Жеке-жеке оқысаңыз қанша тұрады</h3>
+      <div class="grid">
+        <div>КМИС<b>50 000 ₸</b></div>
+        <div>Приказдар<b>100–150 мың ₸</b></div>
+        <div>Анализ талдау<b>50 000 ₸+</b></div>
+        <div>Педиатрия<b>100 000 ₸</b></div>
+        <div>Терапия<b>100 000 ₸</b></div>
+        <div>Фармакология<b>250–300 мың ₸</b></div>
+        <div>Патфизиология<b>100–150 мың ₸</b></div>
+        <div>Гематология<b>150 000 ₸</b></div>
+        <div>Гастроэнтерология<b>50 000 ₸</b></div>
+        <div>Пульмонология<b>100 000 ₸</b></div>
+      </div>
+      <div class="sum">Барлығы бөлек<b>1 млн ₸-ден жоғары</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SPEAKER ===== -->
+<section id="speaker" style="padding-top:0">
+  <div class="wrap">
+    <div class="spk">
+      <div class="spk-photo"><img src="../assets/elnora.png" alt="Абдиева Элнора" loading="lazy"></div>
+      <div class="spk-body">
+        <small>Курс авторы</small>
+        <h2 class="H">Абдиева <span class="acc">Элнора</span></h2>
+        <div class="spk-stats">
+          <div><b>5 жыл</b><span>ВОП стажы</span></div>
+          <div><b>4 жыл</b><span>ВОП-тардың наставнигі</span></div>
+          <div><b>500+</b><span>оқушы</span></div>
+          <div><b>60</b><span>видеосабақ авторы</span></div>
+        </div>
+        <q>Бұл білім маған және менің 500 оқушыма көмектесті — сіздерге де пайдалы болатынына сенімдімін.</q>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section id="faq" style="padding-top:0">
+  <div class="wrap">
+    <h2 class="H sec-title">Жиі <span class="acc">сұрақтар</span></h2>
+    <div class="faq" style="margin-top:22px">
+      <details><summary>Алдын ала жазылу деген не?</summary><p>Жаңа ағынға орыныңызды брондайсыз. Ағын ашылғанда менеджер WhatsApp арқылы хабарласып, тарифті және төлем жолын түсіндіреді.</p></details>
+      <details><summary>Курс қалай өтеді?</summary><p>Онлайн: 60 видеосабақ, өзіңізге ыңғайлы уақытта қарайсыз. Сұрақтарға чатта, ал ВИП және Жеке тарифтерде жеке жауап беріледі.</p></details>
+      <details><summary>Доступ қанша уақытқа беріледі?</summary><p>1 жылға. Сабақтарды қанша рет болса да қайталап көре аласыз.</p></details>
+      <details><summary>Рассрочка бар ма?</summary><p>Иә, Kaspi арқылы 0-0-24 рассрочка бар.</p></details>
+      <details><summary>Ұзақ уақыт жұмыс істемедім, түсінемін бе?</summary><p>Иә. Курс 0-ден құрылған: 10 жыл декретте болған оқушымыз 1 айда оқып, жұмысқа кірді.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FINAL ===== -->
+<section class="final">
+  <div class="wrap">
+    <h2 class="H">Келесі ағынға <span class="acc">орыныңызды</span> брондаңыз</h2>
+    <p>Алдын ала жазылғандарға ағын ашылғанда бірінші хабарласамыз.</p>
+    <div class="cta-box"><button class="btn pulse" type="button" data-open>Алдын ала жазылу</button><p class="cta-note">30 секунд · ақы төленбейді</p></div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">© Абдиева Элнора · «ВОП жұмысы» курсы</div></footer>
+
+<div class="sticky hide" id="sticky"><button class="btn" type="button" data-open>Алдын ала жазылу</button></div>
+
+<!-- ===== POPUP ===== -->
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="scrim" data-close></div>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+    <div class="grab"></div>
+    <button class="close" type="button" data-close aria-label="Жабу">✕</button>
+    <form id="regForm" novalidate>
+      <span class="tag">Жаңа ағын</span>
+      <h2 class="H" id="mTitle">Курсқа <span class="acc">алдын ала жазылу</span></h2>
+      <p class="sub">Ағын ашылғанда менеджер WhatsApp-қа жазады</p>
+      <div class="field">
+        <label for="name">Атыңыз</label>
+        <input id="name" name="name" autocomplete="name" placeholder="Атыңызды жазыңыз" required>
+        <span class="err">Атыңызды жазыңыз</span>
+      </div>
+      <div class="field">
+        <label for="phone">WhatsApp нөміріңіз</label>
+        <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 (7__) ___-__-__" required>
+        <span class="err">Нөмірді толық жазыңыз</span>
+      </div>
+      <div class="field">
+        <label>Қай тариф қызықтырады?</label>
+        <div class="tariffs">
+          <label><input type="radio" name="tariff" value="Стандарт"><span>Стандарт<small>250 000 ₸</small></span></label>
+          <label><input type="radio" name="tariff" value="ВИП"><span>ВИП<small>350 000 ₸</small></span></label>
+          <label><input type="radio" name="tariff" value="Жеке"><span>Жеке<small>400 000 ₸</small></span></label>
+          <label><input type="radio" name="tariff" value="Әлі шешпедім" checked><span>Әлі шешпедім<small>кеңес керек</small></span></label>
+        </div>
+      </div>
+      <button class="btn pulse" type="submit" id="submitBtn">Орнымды брондау</button>
+      <p class="agree">Батырманы басу арқылы деректеріңізді өңдеуге келісім бересіз.</p>
+    </form>
+    <div class="ok" id="regOk" role="status">
+      <div class="check">✓</div>
+      <h3 class="H">Сіз жазылдыңыз!</h3>
+      <p>Ағын ашылғанда менеджер WhatsApp арқылы хабарласады.</p>
+    </div>
+  </div>
+</div>
+<div class="lightbox" id="lb"><img alt=""></div>
+
+<script>
+/* НАСТРОЙКИ: куда уходят заявки предзаписи — подключим после утверждения дизайна */
+const FORM_ENDPOINT = "";
+
+const modal = document.getElementById('modal'), form = document.getElementById('regForm');
+const nameEl = document.getElementById('name'), phone = document.getElementById('phone');
+function openModal(tariff) {
+  if (tariff) { const r = form.querySelector(`input[name=tariff][value="${tariff}"]`); if (r) r.checked = true; }
+  modal.classList.add('open'); document.body.classList.add('lock');
+  setTimeout(() => { if (form.style.display !== 'none') nameEl.focus(); }, 300);
+}
+function closeModal() { modal.classList.remove('open'); document.body.classList.remove('lock'); }
+document.querySelectorAll('[data-open]').forEach(b => b.addEventListener('click', () => openModal(b.dataset.tariff)));
+modal.querySelectorAll('[data-close]').forEach(b => b.addEventListener('click', closeModal));
+document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeModal(); lb.classList.remove('open'); } });
+
+phone.addEventListener('focus', () => { if (!phone.value) phone.value = '+7 '; });
+phone.addEventListener('input', () => {
+  let d = phone.value.replace(/\D/g, '');
+  if (d.startsWith('78')) d = '7' + d.slice(2); else if (d.startsWith('8')) d = '7' + d.slice(1);
+  if (d && !d.startsWith('7')) d = '7' + d;
+  d = d.slice(0, 11); const p = d.slice(1);
+  let out = '+7 ';
+  if (p.length) out += '(' + p.slice(0, 3);
+  if (p.length >= 3) out += ') ';
+  if (p.length > 3) out += p.slice(3, 6);
+  if (p.length > 6) out += '-' + p.slice(6, 8);
+  if (p.length > 8) out += '-' + p.slice(8, 10);
+  phone.value = out.trimEnd();
+});
+
+form.addEventListener('submit', async e => {
+  e.preventDefault();
+  const name = nameEl.value.trim(), digits = phone.value.replace(/\D/g, '');
+  let ok = true;
+  [[nameEl, name.length >= 2], [phone, digits.length === 11]].forEach(([el, v]) => { el.closest('.field').classList.toggle('invalid', !v); if (!v) ok = false; });
+  if (!ok) { form.querySelector('.invalid input').focus(); return; }
+  const tariff = form.querySelector('input[name=tariff]:checked').value;
+  if (FORM_ENDPOINT) { try { await fetch(FORM_ENDPOINT, { method: 'POST', mode: 'no-cors', body: JSON.stringify({ name, phone: '+' + digits, tariff }) }); } catch (_) {} }
+  form.style.display = 'none'; document.getElementById('regOk').style.display = 'block';
+});
+
+/* modules: show all topics */
+document.querySelectorAll('[data-more]').forEach(b => b.addEventListener('click', () => {
+  const m = b.closest('.mod'); m.classList.toggle('open');
+  b.textContent = m.classList.contains('open') ? 'Жасыру ↑' : b.textContent.replace('Жасыру ↑', '');
+  if (!m.classList.contains('open')) b.textContent = 'Барлық ' + m.querySelectorAll('.topics li').length + ' тақырыпты көру ↓';
+}));
+
+/* sticky */
+const sticky = document.getElementById('sticky');
+let heroVis = true, finalVis = false;
+const upd = () => sticky.classList.toggle('hide', heroVis || finalVis);
+new IntersectionObserver(([en]) => { heroVis = en.isIntersecting || en.boundingClientRect.top > 0; upd(); }).observe(document.querySelector('.hero .cta-box'));
+new IntersectionObserver(([en]) => { finalVis = en.isIntersecting; upd(); }, { threshold: .3 }).observe(document.querySelector('.final'));
+
+/* lightbox */
+const lb = document.getElementById('lb'), lbImg = lb.querySelector('img');
+document.getElementById('rail').addEventListener('click', e => { const b = e.target.closest('[data-src]'); if (!b) return; lbImg.src = b.dataset.src; lb.classList.add('open'); });
+lb.addEventListener('click', () => lb.classList.remove('open'));
+</script>
+</body>
+</html>
