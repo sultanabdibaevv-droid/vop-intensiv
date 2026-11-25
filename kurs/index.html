@@ -385,6 +385,38 @@ footer{padding:28px 0 130px;color:var(--muted);font-size:13px;text-align:center}
 .reveal.in{opacity:1;transform:none}
 @media (min-width:760px){.screen{aspect-ratio:16/8}.lessons{grid-template-columns:1fr 1fr}.lessons .more-l{grid-column:1/-1}}
 @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}.plan.pop::before{animation:none}}
+
+/* ===== GUARANTEE ===== */
+.guard{position:relative;overflow:hidden;max-width:720px;margin:0 auto;text-align:center;border-radius:30px;padding:34px 18px 22px;
+  background:radial-gradient(90% 60% at 50% 0%,rgba(74,222,128,.18),transparent 65%),linear-gradient(180deg,#132232,#111a27);
+  border:1px solid rgba(74,222,128,.35);box-shadow:0 30px 80px -30px rgba(74,222,128,.35)}
+.guard::before{content:"";position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1px);background-size:18px 18px;
+  -webkit-mask-image:linear-gradient(180deg,#000,transparent 60%);mask-image:linear-gradient(180deg,#000,transparent 60%)}
+.g-shield{position:relative;width:74px;height:74px;margin:0 auto 14px;border-radius:24px;display:grid;place-items:center;color:#052e16;
+  background:linear-gradient(160deg,#a7f3c4,#4ade80);box-shadow:0 0 0 10px rgba(74,222,128,.12),0 14px 40px -6px rgba(74,222,128,.7)}
+.g-shield svg{width:38px;height:38px}
+.g-kicker{display:inline-block;font:800 11px/1 Montserrat,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--ok)}
+.g-title{font:900 clamp(25px,7vw,54px)/1.05 Montserrat,sans-serif;letter-spacing:-.02em;margin:10px 0 12px;text-transform:uppercase}
+.g-title span{display:inline-block;font-size:1.12em;background:linear-gradient(180deg,#d9ffe8,#4ade80);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 18px rgba(74,222,128,.45))}
+.g-sub{color:var(--soft);font-size:15.5px;max-width:520px;margin:0 auto}
+.road{list-style:none;position:relative;text-align:left;margin:26px auto 0;max-width:480px;display:grid;gap:14px;padding-left:4px}
+.road::before{content:"";position:absolute;left:21px;top:18px;bottom:18px;width:2px;background:linear-gradient(180deg,var(--acc),var(--ok));box-shadow:0 0 12px rgba(94,225,255,.6)}
+.road li{position:relative;display:flex;gap:14px;align-items:center}
+.road .dot{flex:none;position:relative;z-index:1;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font:900 14px/1 Montserrat,sans-serif;background:#0d1626;color:var(--acc);border:2px solid var(--acc)}
+.road b{display:block;font-size:16px}
+.road small{display:block;color:var(--muted);font-size:13px;margin-top:2px}
+.road li > div{flex:1;background:rgba(255,255,255,.035);border:1px solid var(--line);border-radius:14px;padding:10px 13px}
+.road .hot > div{border-color:rgba(94,225,255,.45);background:var(--acc-soft)}
+.road .hot .dot{background:var(--acc);color:var(--acc-ink);box-shadow:0 0 18px var(--acc)}
+.road .win .dot{background:var(--ok);border-color:var(--ok);color:#052e16;box-shadow:0 0 20px rgba(74,222,128,.8)}
+.road .win > div{border-color:rgba(74,222,128,.5);background:rgba(74,222,128,.10)}
+.road .win b{color:var(--ok)}
+.g-perks{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:22px auto 20px;max-width:520px}
+.g-perks div{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:14px;padding:11px 6px}
+.g-perks b{display:block;font-size:12.5px;line-height:1.25}
+.g-perks span{display:block;font-size:11.5px;color:var(--muted);margin-top:3px}
+.guard .btn{max-width:440px;margin:0 auto}
+@media (min-width:760px){.guard{padding:48px 40px 34px}}
 </style>
 </head>
 <body>
@@ -406,7 +438,7 @@ footer{padding:28px 0 130px;color:var(--muted);font-size:13px;text-align:center}
       <div class="chip c2"><small>Айкерім</small><b>437 000 ₸</b><span>жалақы · 2 участок</span></div>
       <div class="chip c3"><small>Доступ</small><b>1 жыл</b><span>қайталап көресіз</span></div>
       <div class="chip c4"><small>Гүльнара</small><b>1,5 млн ₸</b><span>5 айда табыс</span></div>
-      <div class="chip c5"><small>Кері байланыс</small><b>WhatsApp</b><span>жалақы алғанша</span></div>
+      <div class="chip c5"><small>Сүйемелдеу</small><b>2 айлық</b><span>алғанша қасыңызда</span></div>
       <div class="chip c6"><small>Оқушылар</small><b>500+</b><span>ВОП дайындадым</span></div>
     </div>
     <div class="cta-box">
@@ -438,26 +470,29 @@ footer{padding:28px 0 130px;color:var(--muted);font-size:13px;text-align:center}
   </div>
 </section>
 
-<!-- ===== INSIDE ===== -->
-<section id="inside" style="padding-top:0">
+<!-- ===== SUPPORT / GUARANTEE ===== -->
+<section id="support" style="padding-top:0">
   <div class="wrap">
-    <span class="tag">Курстың ішінен</span>
-    <h2 class="H sec-title">Сабақтар <span class="acc">осылай</span> өтеді</h2>
-    <p class="sec-sub">Қысқа видео · КМИС-ті экраннан көрсету · дайын шаблондар</p>
-    <div class="player">
-      <div class="screen">
-        <img src="../assets/elnora-hero.png" alt="" loading="lazy">
-        <div class="scr-txt"><small>1-модуль · 2-сабақ</small><b>КМИС-те пациентті қабылдау</b></div>
-        <button class="play" type="button" data-open aria-label="Курсқа жазылу"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></button>
-        <div class="scr-bar"><i></i></div>
+    <div class="guard">
+      <div class="g-shield"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg></div>
+      <span class="g-kicker">Біздің кепіліміз</span>
+      <h2 class="g-title">2 айлық алғанша<br><span>жаныңыздамыз</span></h2>
+      <p class="g-sub">Курсты бітіріп, жалғыз қалмайсыз. Жұмысқа кіргеннен кейін де куратор қасыңызда — екінші жалақыңызды алғанша сүйемелдейміз.</p>
+
+      <ol class="road">
+        <li><span class="dot">1</span><div><b>Курсты оқисыз</b><small>1 ай · 60 видеосабақ, сұрақтарға жауап</small></div></li>
+        <li><span class="dot">2</span><div><b>Жұмысқа кіресіз</b><small>стажировкасыз, ВОП болып</small></div></li>
+        <li class="hot"><span class="dot">3</span><div><b>Алғашқы жұмыс күндері</b><small>куратор WhatsApp-та қасыңызда: пациент, КМИС, құжат</small></div></li>
+        <li><span class="dot">4</span><div><b>1-айлық</b><small>сүйемелдеу жалғасады</small></div></li>
+        <li class="win"><span class="dot">✓</span><div><b>2-айлық</b><small>өз бетіңізше сенімді жұмыс істейсіз</small></div></li>
+      </ol>
+
+      <div class="g-perks">
+        <div><b>Жұмыстағы сұрақтар</b><span>жауап аласыз</span></div>
+        <div><b>Қиын жағдай</b><span>кеңес береміз</span></div>
+        <div><b>Құжаттама</b><span>бірге тексереміз</span></div>
       </div>
-      <ul class="lessons">
-        <li class="done"><span class="st">✓</span><b>ВОП дәрігер кім, қызметі</b><small>1-модуль</small></li>
-        <li class="now"><span class="st">▶</span><b>КМИС — толық, экраннан</b><small>қазір</small></li>
-        <li><span class="st">3</span><b>49/90 приказ</b><small>1-модуль</small></li>
-        <li><span class="st">4</span><b>Артериялық гипертензия</b><small>2-модуль</small></li>
-        <li class="more-l">+ тағы 56 сабақ</li>
-      </ul>
+      <button class="btn pulse" type="button" data-open>Сүйемелдеумен оқу</button>
     </div>
   </div>
 </section>
@@ -855,7 +890,7 @@ document.querySelectorAll('[data-count]').forEach(el => cio.observe(el));
 /* reveal on scroll — only for blocks below the first screen, so nothing is hidden at load */
 if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
   const rio = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); rio.unobserve(en.target); } }), { threshold: .12 });
-  document.querySelectorAll('.num,.player,.w,.race,.mod,.b,.a,.income,.case,.plan,.worth,.spk,details').forEach(el => {
+  document.querySelectorAll('.num,.guard,.w,.race,.mod,.b,.a,.income,.case,.plan,.worth,.spk,details').forEach(el => {
     if (el.getBoundingClientRect().top > innerHeight) { el.classList.add('reveal'); rio.observe(el); }
   });
 }
