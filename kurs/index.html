@@ -439,6 +439,8 @@ footer{padding:28px 0 130px;color:var(--muted);font-size:13px;text-align:center}
 .feat li.cur{color:var(--ok);font-weight:700}
 .ok-t{color:var(--ok)}
 @media (min-width:760px){.how3{grid-template-columns:repeat(3,1fr);max-width:none}.how3 li{flex-direction:column;text-align:center}}
+.g-note{font-size:13.5px;color:var(--muted);margin:-8px 0 16px}
+.faq details p b{color:#fff}
 </style>
 </head>
 <body>
@@ -460,7 +462,7 @@ footer{padding:28px 0 130px;color:var(--muted);font-size:13px;text-align:center}
       <div class="chip c2"><small>Айкерім</small><b>437 000 ₸</b><span>жалақы · 2 участок</span></div>
       <div class="chip c3"><small>Доступ</small><b>1 жыл</b><span>қайталап көресіз</span></div>
       <div class="chip c4"><small>Гүльнара</small><b>1,5 млн ₸</b><span>5 айда табыс</span></div>
-      <div class="chip c5"><small>Сүйемелдеу</small><b>2 айлық</b><span>алғанша кері байланыс</span></div>
+      <div class="chip c5"><small>Жеке тариф</small><b>2 айлық</b><span>алғанша байланыс</span></div>
       <div class="chip c6"><small>Оқушылар</small><b>500+</b><span>ВОП дайындадым</span></div>
     </div>
     <div class="cta-box">
@@ -497,10 +499,10 @@ footer{padding:28px 0 130px;color:var(--muted);font-size:13px;text-align:center}
   <div class="wrap">
     <div class="guard">
       <div class="g-shield"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg></div>
-      <span class="g-kicker">Біздің кепіліміз · әр оқушыға</span>
-      <h2 class="g-title">Алғашқы 2 айлығыңызды<br>алғанша <span>кері байланыс</span></h2>
-      <p class="g-sub">Курсты оқып кетіп, жалғыз қалмайсыз. Куратор оқу кезінде де, жұмысқа кіргеннен кейін де кері байланыс береді — <b>алғашқы 2 айлығыңызды алғанша</b>.</p>
-      <span class="g-all">✓ Барлық 3 тарифте бар</span>
+      <span class="g-kicker">Жеке тарифте</span>
+      <h2 class="g-title">Алғашқы 2 айлығыңызды<br>алғанша <span>жеке байланыс</span></h2>
+      <p class="g-sub">Жұмысқа кіргеннен кейін де жалғыз қалмайсыз: <b>2 ай бойы</b> WhatsApp-та хабарласып, қоңырау шалып, кез келген сұрағыңызға жауап аласыз.</p>
+      <span class="g-all">★ Жеке тариф</span>
 
       <div class="cover">
         <div class="cv-track">
@@ -508,16 +510,17 @@ footer{padding:28px 0 130px;color:var(--muted);font-size:13px;text-align:center}
           <div class="cv-seg"><b>Жұмыс</b><small>1-айлық</small></div>
           <div class="cv-seg win"><b>2-айлық</b><small>✓</small></div>
         </div>
-        <div class="cv-bar"><span>Куратордан кері байланыс</span></div>
+        <div class="cv-bar"><span>Хабарласу · қоңырау · кеңес</span></div>
       </div>
 
       <h3 class="g-how">Қалай жұмыс істейді?</h3>
       <ol class="how3">
-        <li><span>1</span><div><b>Курсқа кіресіз</b><small>сізді куратормен WhatsApp-та байланыстырамыз</small></div></li>
-        <li><span>2</span><div><b>Сұрағыңызды жазасыз</b><small>оқу, пациент, КМИС, құжат — куратор жауап береді</small></div></li>
-        <li><span>3</span><div><b>2-айлық алғанша</b><small>жұмыста сенімді болғанша куратор кері байланыс береді</small></div></li>
+        <li><span>1</span><div><b>Жеке тарифке тіркелесіз</b><small>WhatsApp-та жеке байланыс ашамыз</small></div></li>
+        <li><span>2</span><div><b>Хабарласасыз, қоңырау шаласыз</b><small>пациент, КМИС, құжат — кез келген сұрақ</small></div></li>
+        <li><span>3</span><div><b>2 ай бойы</b><small>алғашқы 2 айлығыңызды алғанша байланыстамыз</small></div></li>
       </ol>
-      <button class="btn pulse" type="button" data-open>Тіркелу</button>
+      <p class="g-note">ВИП тарифте — куратормен кері байланыс</p>
+      <button class="btn pulse" type="button" data-open data-tariff="Жеке">Тіркелу</button>
     </div>
   </div>
 </section>
@@ -703,44 +706,42 @@ footer{padding:28px 0 130px;color:var(--muted);font-size:13px;text-align:center}
   <div class="wrap">
     <span class="tag">Тарифтер</span>
     <h2 class="H sec-title">Өзіңізге ыңғайлы <span class="acc">тарифті</span> таңдаңыз</h2>
-    <p class="sec-sub">Барлық тарифте: 60 видеосабақ, 2 модуль, бонустар, 1 жыл доступ, <b class="ok-t">2 айлық алғанша куратор</b> · Kaspi 0-0-12</p>
+    <p class="sec-sub">Барлық тарифте: 60 видеосабақ, 2 модуль, 1 жыл доступ · Kaspi 0-0-12</p>
     <div class="plans">
       <div class="plan">
         <h3 class="H">Стандарт</h3>
-        <p class="for">Куратормен оқу</p>
+        <p class="for">Сабақтарға доступ</p>
         <div class="month"><span class="kbadge">Kaspi 0-0-12</span><div class="price">20 833 <small>₸/ай</small></div></div>
         <p class="full">немесе <b>250 000 ₸</b> бірден</p>
         <ul class="feat">
           <li>1-модуль: документация, КМИС, приказдар</li>
           <li>2-модуль: 25 нозология</li>
-          <li>Барлық бонустар</li>
-          <li>Ортақ чат</li>
-          <li class="cur">Куратор: 2 айлық алғанша кері байланыс</li>
+          <li>60 видеосабақ, 1 жыл доступ</li>
         </ul>
         <button class="btn ghost" type="button" data-open data-tariff="Стандарт">Тіркелу</button>
       </div>
       <div class="plan pop">
         <span class="flag">Ең көп таңдалады</span>
         <h3 class="H">ВИП</h3>
-        <p class="for">Куратор + Элнора ортақ чатта</p>
+        <p class="for">Куратормен кері байланыс</p>
         <div class="month"><span class="kbadge">Kaspi 0-0-12</span><div class="price">29 167 <small>₸/ай</small></div></div>
         <p class="full">немесе <b>350 000 ₸</b> бірден</p>
         <ul class="feat">
           <li>Стандарттағы барлығы</li>
-          <li class="cur">Куратор: 2 айлық алғанша кері байланыс</li>
-          <li class="plus">Элнорадан кері байланыс ортақ чатта</li>
+          <li class="plus">Куратормен кері байланыс</li>
         </ul>
         <button class="btn" type="button" data-open data-tariff="ВИП">Тіркелу</button>
       </div>
       <div class="plan">
         <h3 class="H">Жеке</h3>
-        <p class="for">Элнорамен жеке байланыс</p>
+        <p class="for">Жеке байланыс, қоңырау</p>
         <div class="month"><span class="kbadge">Kaspi 0-0-12</span><div class="price">33 333 <small>₸/ай</small></div></div>
         <p class="full">немесе <b>400 000 ₸</b> бірден</p>
         <ul class="feat">
           <li>Стандарттағы барлығы</li>
-          <li class="cur">Куратор: 2 айлық алғанша кері байланыс</li>
-          <li class="plus">Элнорадан жеке кері байланыс WhatsApp арқылы</li>
+          <li class="plus">Куратормен кері байланыс</li>
+          <li class="cur">WhatsApp-та жеке хабарласу және қоңырау</li>
+          <li class="cur">Алғашқы 2 айлығыңызды алғанша</li>
         </ul>
         <button class="btn ghost" type="button" data-open data-tariff="Жеке">Тіркелу</button>
       </div>
@@ -793,8 +794,8 @@ footer{padding:28px 0 130px;color:var(--muted);font-size:13px;text-align:center}
       <details><summary>Тіркелгеннен кейін не болады?</summary><p>Менеджер WhatsApp арқылы хабарласып, тарифті таңдауға көмектеседі және төлем жолын түсіндіреді.</p></details>
       <details><summary>Курс қалай өтеді?</summary><p>Онлайн: 60 видеосабақ, өзіңізге ыңғайлы уақытта қарайсыз. Сұрақтарға чатта, ал ВИП және Жеке тарифтерде жеке жауап беріледі.</p></details>
       <details><summary>Доступ қанша уақытқа беріледі?</summary><p>1 жылға. Сабақтарды қанша рет болса да қайталап көре аласыз.</p></details>
-      <details><summary>Куратор деген кім, қалай көмектеседі?</summary><p>Куратор — курстағы тәжірибелі дәрігер. Оқу кезінде және жұмысқа кіргеннен кейін WhatsApp арқылы сұрақтарыңызға жауап береді: пациент, КМИС, құжаттама. Алғашқы 2 айлығыңызды алғанша кері байланыс береді.</p></details>
-      <details><summary>Сүйемелдеу қай тарифте бар?</summary><p>Барлық үш тарифте. Айырмашылығы: ВИП-те Элнора ортақ чатта жауап береді, Жеке тарифте — WhatsApp арқылы жеке.</p></details>
+      <details><summary>Тарифтердің айырмашылығы неде?</summary><p><b>Стандарт</b> — тек сабақтарға доступ. <b>ВИП</b> — сабақтар және куратормен кері байланыс. <b>Жеке</b> — сабақтар, куратор және жеке байланыс: алғашқы 2 айлығыңызды алғанша WhatsApp-та хабарласып, қоңырау шала аласыз.</p></details>
+      <details><summary>Жұмысқа кіргеннен кейін де көмектесесіздер ме?</summary><p>Иә, Жеке тарифте. Жұмысқа кіргеннен кейін 2 ай бойы — алғашқы 2 айлығыңызды алғанша — хабарласып, қоңырау шалып, сұрақтарыңызға жауап аласыз.</p></details>
       <details><summary>Рассрочка бар ма?</summary><p>Иә, Kaspi арқылы 0-0-12: 12 айға бөліп төлейсіз, үстеме ақысыз. Мысалы, Стандарт тариф — айына 20 833 ₸.</p></details>
       <details><summary>Ұзақ уақыт жұмыс істемедім, түсінемін бе?</summary><p>Иә. Курс 0-ден құрылған: 10 жыл декретте болған оқушымыз 1 айда оқып, жұмысқа кірді.</p></details>
     </div>
