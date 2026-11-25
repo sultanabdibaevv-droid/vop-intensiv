@@ -1,0 +1,537 @@
+<!-- ВОП ем схема · блок T123 для Tilda. Собран из kitap/index.html скриптом build_tilda_kitap.py. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+<style>
+
+.vop{
+  --bg:#07111f; --bg2:#0c1a2e; --card:#122238; --card2:#172a45;
+  --line:rgba(255,255,255,.09); --text:#f4f7fb; --muted:#9db0c8; --soft:#c9d6e6;
+  --acc:#5ee1ff; --acc2:#1fa8ea; --acc-ink:#03202b; --acc-soft:rgba(94,225,255,.12);
+  --ok:#4ade80; --red:#ff5a6a; --gold:#ffcf5a;
+  --max:1080px;
+}
+.vop,.vop *{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+.vop{background:var(--bg);color:var(--text);font:400 16px/1.55 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:hidden}
+body.lock{overflow:hidden}
+.vop img{max-width:100%;display:block}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 16px}
+.H{font-family:Montserrat,Inter,sans-serif;font-weight:800;text-transform:uppercase;line-height:1.08}
+.acc{color:var(--acc)}
+.nw{white-space:nowrap}
+.vop section{padding:52px 0}
+.sec-title{font-size:clamp(26px,7vw,44px);text-align:center;margin-bottom:10px;text-wrap:balance}
+.sec-sub{text-align:center;color:var(--muted);margin:0 auto 26px;max-width:560px;font-size:15px}
+.tag{display:block;width:fit-content;margin:0 auto 12px;font:800 11px/1 Montserrat,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);background:var(--acc-soft);border:1px solid rgba(94,225,255,.3);padding:7px 12px;border-radius:999px}
+
+.btn{position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;gap:10px;width:100%;text-align:center;border:0;cursor:pointer;text-decoration:none;
+  font:900 18px/1.15 Montserrat,sans-serif;text-transform:uppercase;color:var(--acc-ink);padding:21px 24px;border-radius:999px;
+  background:linear-gradient(180deg,#a6f1ff,var(--acc) 45%,var(--acc2));box-shadow:0 14px 40px -10px rgba(94,225,255,.6),inset 0 2px 0 rgba(255,255,255,.55);transition:transform .15s}
+.btn:active{transform:translateY(1px) scale(.99)}
+.btn small{display:block;font:600 12px/1 Inter,sans-serif;text-transform:none;opacity:.75;margin-top:3px}
+.btn.col{flex-direction:column;gap:2px;padding:15px 20px}
+.btn.shine::before{content:"";position:absolute;top:0;bottom:0;left:-30%;width:22%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.75),transparent);transform:skewX(-20deg);animation:sweep 3.4s ease-in-out infinite}
+@keyframes sweep{0%,60%{left:-30%}100%{left:120%}}
+.cta-box{max-width:520px;margin:26px auto 0}
+.cta-note{text-align:center;color:var(--muted);font-size:13px;margin-top:10px}
+
+/* ===== HERO ===== */
+.hero{position:relative;overflow:hidden;padding:16px 0 26px;
+  background:radial-gradient(80% 50% at 50% 46%,rgba(31,168,234,.32),transparent 70%),radial-gradient(60% 30% at 50% 0%,rgba(94,225,255,.12),transparent 70%)}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(94,225,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(94,225,255,.06) 1px,transparent 1px);background-size:32px 32px;
+  -webkit-mask-image:radial-gradient(70% 55% at 50% 45%,#000,transparent 75%);mask-image:radial-gradient(70% 55% at 50% 45%,#000,transparent 75%)}
+.hero .wrap{position:relative}
+.topbar{display:flex;align-items:center;width:fit-content;margin:0 auto;padding:3px 12px 3px 3px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12)}
+.topbar .new{font:800 9.5px/1 Montserrat,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#052e16;background:var(--ok);padding:5px 8px;border-radius:999px}
+.topbar .sep{width:1px;height:12px;background:rgba(255,255,255,.2);margin:0 9px}
+.topbar b{font:500 11.5px/1.2 Inter,sans-serif;color:var(--muted);white-space:nowrap}
+.hero h1{text-align:center;margin-top:14px;font-family:Montserrat,Inter,sans-serif}
+.h-small{display:block;font:800 clamp(15px,4.4vw,24px)/1.2 Montserrat,sans-serif;color:var(--soft);letter-spacing:.02em}
+.h-big{display:block;font:900 clamp(46px,14vw,104px)/.95 Montserrat,sans-serif;letter-spacing:-.035em;text-transform:uppercase;margin-top:4px;
+  background:linear-gradient(180deg,#fff 10%,#a8f2ff 52%,#2fb6f2);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 22px rgba(94,225,255,.45))}
+.h-pills{display:flex;justify-content:center;gap:6px;flex-wrap:wrap;margin-top:10px}
+.h-pills span{font:800 12.5px/1 Montserrat,sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:8px 12px;border-radius:999px;border:1px solid rgba(94,225,255,.35);color:var(--acc);background:rgba(94,225,255,.07)}
+
+/* 3D book */
+.book-stage{position:relative;height:clamp(300px,47svh,520px);margin:12px auto 0;max-width:560px;perspective:1300px;display:grid;place-items:center}
+.book-stage::before{content:"";position:absolute;left:50%;top:50%;width:76%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle,rgba(94,225,255,.45),rgba(31,120,234,.15) 45%,transparent 70%);filter:blur(4px)}
+.book{position:relative;height:88%;aspect-ratio:900/1436;transform-style:preserve-3d;transform:rotateY(-24deg) rotateX(4deg);animation:bookfloat 6s ease-in-out infinite}
+@keyframes bookfloat{0%,100%{transform:rotateY(-24deg) rotateX(4deg) translateY(0)}50%{transform:rotateY(-18deg) rotateX(3deg) translateY(-8px)}}
+.book .front{position:absolute;inset:0;border-radius:3px 8px 8px 3px;overflow:hidden;box-shadow:inset 6px 0 10px -4px rgba(0,0,0,.45);transform:translateZ(14px)}
+.book .front img{width:100%;height:100%;object-fit:cover}
+.book .front::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,rgba(255,255,255,.28),transparent 30%,transparent 70%,rgba(255,255,255,.08))}
+.book .pages{position:absolute;top:1.2%;bottom:1.2%;right:-1px;width:28px;transform:rotateY(90deg) translateZ(-14px);transform-origin:right;
+  background:repeating-linear-gradient(90deg,#f3f5f8 0 1px,#d9dee6 1px 2px);border-radius:0 3px 3px 0}
+.book .spine{position:absolute;top:0;bottom:0;left:0;width:28px;transform:rotateY(-90deg) translateZ(0);transform-origin:left;background:linear-gradient(90deg,#062a5c,#0b4a9a);border-radius:3px 0 0 3px}
+.book .shadow{position:absolute;left:8%;right:-6%;bottom:-7%;height:7%;border-radius:50%;background:radial-gradient(closest-side,rgba(0,0,0,.65),transparent);transform:translateZ(-40px)}
+.sticker{position:absolute;z-index:3;right:4%;top:9%;width:104px;height:104px;border-radius:50%;display:grid;place-items:center;text-align:center;transform:rotate(12deg);
+  background:radial-gradient(circle at 35% 30%,#ffe7a0,#ffcf5a 55%,#f0a91f);color:#3a2300;box-shadow:0 12px 30px -8px rgba(255,190,60,.7),0 0 0 4px rgba(255,207,90,.25);animation:pop 2.6s ease-in-out infinite}
+.sticker s{display:block;font:700 11px/1 Inter,sans-serif;opacity:.7}
+.sticker b{display:block;font:900 22px/1 Montserrat,sans-serif;margin:3px 0 2px}
+.sticker small{display:block;font:800 9px/1.1 Montserrat,sans-serif;text-transform:uppercase;letter-spacing:.04em}
+@keyframes pop{50%{transform:rotate(12deg) scale(1.06)}}
+.ai-chip{position:absolute;z-index:3;left:2%;bottom:12%;display:flex;align-items:center;gap:8px;padding:9px 12px;border-radius:14px;background:rgba(14,26,44,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(160,130,255,.45);box-shadow:0 10px 30px -10px rgba(120,90,255,.6)}
+.ai-chip i{font-style:normal;font-size:20px}
+.ai-chip b{display:block;font:800 13px/1.1 Montserrat,sans-serif;background:linear-gradient(90deg,#8ab4ff,#c58bff,#ff8fb0);-webkit-background-clip:text;background-clip:text;color:transparent}
+.ai-chip small{display:block;font-size:10.5px;color:var(--muted)}
+.price-row{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:6px}
+.price-row s{font:700 18px/1 Montserrat,sans-serif;color:var(--muted)}
+.price-row b{font:900 40px/1 Montserrat,sans-serif;color:#fff}
+.price-row em{font-style:normal;font:800 11px/1.1 Montserrat,sans-serif;text-transform:uppercase;letter-spacing:.06em;color:#052e16;background:var(--ok);padding:7px 9px;border-radius:9px}
+.hero .cta-box{margin-top:16px}
+
+/* ===== PAIN ===== */
+.pain{display:grid;gap:10px;max-width:640px;margin:0 auto}
+.pn{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 16px;font-size:15.5px;line-height:1.4}
+.pn::before{content:"?";flex:none;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font:900 14px/1 Montserrat,sans-serif;background:rgba(255,90,106,.15);color:var(--red)}
+.answer{max-width:640px;margin:18px auto 0;text-align:center;border-radius:22px;padding:20px 18px;background:linear-gradient(135deg,rgba(94,225,255,.16),rgba(74,222,128,.10));border:1px solid rgba(94,225,255,.35)}
+.answer b{display:block;font:900 clamp(20px,5.6vw,30px)/1.15 Montserrat,sans-serif;text-transform:uppercase}
+.answer b span{color:var(--acc)}
+.answer p{color:var(--soft);margin-top:8px;font-size:15px}
+
+/* ===== NUMBERS ===== */
+.nums{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;max-width:640px;margin:0 auto}
+.num{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px 14px;position:relative;overflow:hidden}
+.num b{display:block;font:900 32px/1 Montserrat,sans-serif;background:linear-gradient(180deg,#fff,#7fe6ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.num span{display:block;margin-top:6px;font-size:13.5px;color:var(--soft);line-height:1.35}
+
+/* ===== PAGE ANATOMY ===== */
+.anat{max-width:720px;margin:0 auto;display:grid;gap:16px}
+.sheet-prev{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#fff;box-shadow:0 30px 70px -30px rgba(0,0,0,.8);aspect-ratio:800/760}
+.sheet-prev img{width:100%;height:auto}
+.sheet-prev::after{content:"";position:absolute;inset:auto 0 0 0;height:30%;background:linear-gradient(180deg,transparent,rgba(7,17,31,.9))}
+.sheet-prev .zoomhint{position:absolute;z-index:1;left:50%;bottom:14px;transform:translateX(-50%);font:700 12.5px/1 Inter,sans-serif;color:#fff;background:rgba(7,17,31,.85);border:1px solid rgba(94,225,255,.4);padding:9px 14px;border-radius:999px;white-space:nowrap}
+.feats{display:grid;gap:8px}
+.ft{display:flex;gap:12px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.ft .mk{flex:none;width:34px;height:34px;border-radius:10px;display:grid;place-items:center;font-size:17px}
+.ft b{display:block;font-size:15px}
+.ft small{display:block;font-size:13px;color:var(--muted)}
+.mk.r{background:rgba(255,90,106,.16)}.mk.g{background:rgba(74,222,128,.16)}.mk.b{background:var(--acc-soft)}.mk.y{background:rgba(255,207,90,.16)}
+.thumbs{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -16px;padding:4px 16px 8px;scrollbar-width:none}
+.thumbs::-webkit-scrollbar{display:none}
+.thumbs button{all:unset;cursor:zoom-in;flex:0 0 46%;max-width:220px;scroll-snap-align:start;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:#fff;box-shadow:0 14px 30px -16px rgba(0,0,0,.8)}
+.thumbs img{width:100%;aspect-ratio:800/1132;object-fit:cover;object-position:top}
+
+/* ===== SECTIONS (all diseases) ===== */
+.secs{display:grid;gap:8px;max-width:760px;margin:0 auto}
+.sec{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.sec summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;padding:14px 14px}
+.sec summary::-webkit-details-marker{display:none}
+.sec .ico{flex:none;width:40px;height:40px;border-radius:12px;display:grid;place-items:center;font-size:20px;background:var(--acc-soft)}
+.sec .nm{flex:1;min-width:0}
+.sec .nm b{display:block;font-size:15px;line-height:1.25}
+.sec .nm small{display:block;font-size:12.5px;color:var(--muted);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sec .cnt{flex:none;font:800 12px/1 Montserrat,sans-serif;color:var(--acc-ink);background:var(--acc);padding:6px 9px;border-radius:999px}
+.sec summary::after{content:"+";flex:none;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;color:var(--acc);font-size:18px;background:rgba(255,255,255,.05);transition:transform .2s}
+.sec[open] summary::after{transform:rotate(45deg)}
+.sec ul{list-style:none;display:flex;flex-wrap:wrap;gap:6px;padding:0 14px 16px}
+.sec li{font-size:13px;color:#e2e8f0;padding:7px 10px;border-radius:10px;background:rgba(255,255,255,.04);border:1px solid var(--line)}
+.sec-open-all{display:block;margin:12px auto 0;background:none;border:1px dashed rgba(94,225,255,.45);color:var(--acc);font:700 14px/1 Inter,sans-serif;padding:13px 18px;border-radius:12px;cursor:pointer}
+
+/* ===== AI ===== */
+.ai{position:relative;overflow:hidden;max-width:720px;margin:0 auto;border-radius:28px;padding:28px 16px 20px;text-align:center;
+  background:radial-gradient(80% 60% at 50% 0%,rgba(140,110,255,.25),transparent 65%),linear-gradient(180deg,#141d35,#0f1830);border:1px solid rgba(160,130,255,.4);box-shadow:0 30px 80px -30px rgba(120,90,255,.5)}
+.ai-badge{display:inline-flex;align-items:center;gap:8px;font:800 11px/1 Montserrat,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#fff;padding:8px 12px;border-radius:999px;background:linear-gradient(90deg,#4f7dff,#9b6bff,#ff6fa0)}
+.ai h2{font:900 clamp(26px,7.4vw,46px)/1.05 Montserrat,sans-serif;text-transform:uppercase;margin:14px 0 10px}
+.ai h2 span{background:linear-gradient(90deg,#8ab4ff,#c58bff,#ff8fb0);-webkit-background-clip:text;background-clip:text;color:transparent}
+.ai > p{color:var(--soft);max-width:520px;margin:0 auto;font-size:15px}
+.chat{max-width:460px;margin:20px auto 0;text-align:left;background:#0b1224;border:1px solid rgba(255,255,255,.1);border-radius:20px;overflow:hidden}
+.chat-h{display:flex;align-items:center;gap:10px;padding:11px 14px;border-bottom:1px solid rgba(255,255,255,.08)}
+.chat-h .dot{width:30px;height:30px;border-radius:50%;background:conic-gradient(#4f7dff,#9b6bff,#ff6fa0,#4f7dff);display:grid;place-items:center;font-size:14px}
+.chat-h b{font-size:14px}
+.chat-h small{display:block;font-size:11px;color:var(--ok)}
+.msgs{display:grid;gap:10px;padding:14px}
+.m{max-width:88%;padding:10px 12px;border-radius:16px;font-size:14px;line-height:1.45}
+.m.u{justify-self:end;background:#2a4fd6;color:#fff;border-bottom-right-radius:6px}
+.m.a{background:#18233d;color:#e5ecf7;border-bottom-left-radius:6px}
+.m.a b{color:#fff}
+.m.a .row{display:flex;justify-content:space-between;gap:10px;padding:5px 0;border-bottom:1px dashed rgba(255,255,255,.1);font-variant-numeric:tabular-nums}
+.m.a .row:last-of-type{border-bottom:0}
+.m.a .warn{margin-top:8px;font-size:12.5px;color:#ffb4bd}
+.typing{display:inline-flex;gap:4px}
+.typing i{width:6px;height:6px;border-radius:50%;background:#9db0c8;animation:blink 1s infinite}
+.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes blink{50%{opacity:.25}}
+.ai-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;max-width:520px;margin:18px auto 0}
+.ai-steps div{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:11px 6px}
+.ai-steps b{display:block;font:900 18px/1 Montserrat,sans-serif;color:#c58bff}
+.ai-steps span{display:block;font-size:12px;color:var(--soft);margin-top:4px;line-height:1.3}
+.ai-note{font-size:12px;color:var(--muted);margin-top:14px}
+
+/* ===== WHO ===== */
+.who{display:grid;grid-template-columns:1fr 1fr;gap:8px;max-width:640px;margin:0 auto}
+.who div{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 12px;font-weight:700;font-size:14.5px;display:flex;gap:10px;align-items:center}
+.who i{font-style:normal;font-size:20px}
+
+/* ===== AUTHOR ===== */
+.au{max-width:720px;margin:0 auto;display:grid;grid-template-columns:120px 1fr;gap:16px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:24px;padding:16px}
+.au .ph{width:120px;height:140px;border-radius:18px;overflow:hidden;background:radial-gradient(70% 60% at 50% 40%,#1d5fb0,#0b2552 70%)}
+.au .ph img{width:100%;height:100%;object-fit:cover;object-position:top}
+.au small{color:var(--muted);font-size:12.5px}
+.au h3{font:900 22px/1.1 Montserrat,sans-serif;margin:3px 0 8px}
+.au ul{list-style:none;display:grid;gap:4px;font-size:13.5px;color:var(--soft)}
+.au li::before{content:"✓ ";color:var(--ok);font-weight:800}
+
+/* ===== OFFER ===== */
+.offer{position:relative;max-width:560px;margin:0 auto;border-radius:30px;padding:26px 18px 20px;text-align:center;overflow:hidden;isolation:isolate}
+.offer::before{content:"";position:absolute;z-index:-2;left:50%;top:50%;width:170%;aspect-ratio:1;transform:translate(-50%,-50%);background:conic-gradient(from 0deg,transparent 0 62%,#5ee1ff 75%,#fff 80%,#c58bff 86%,transparent 92%);animation:spin 5s linear infinite}
+.offer::after{content:"";position:absolute;z-index:-1;inset:2px;border-radius:28px;background:linear-gradient(180deg,#14283f,#0e1b2e)}
+@keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+.offer .lbl{font:800 11px/1 Montserrat,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.offer h2{font:900 clamp(24px,6.6vw,36px)/1.1 Montserrat,sans-serif;text-transform:uppercase;margin:10px 0 14px}
+.inc{list-style:none;display:grid;gap:8px;text-align:left;margin-bottom:18px}
+.inc li{display:flex;justify-content:space-between;align-items:center;gap:10px;background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:14px;padding:12px 14px;font-size:14.5px}
+.inc li span{display:flex;gap:10px;align-items:center}
+.inc li em{font-style:normal;color:var(--muted);text-decoration:line-through;font-size:13px;white-space:nowrap}
+.inc li.gift em{color:var(--ok);text-decoration:none;font-weight:800}
+.big-price{display:flex;flex-direction:column;align-items:center;gap:4px;margin-bottom:16px}
+.big-price s{font:700 18px/1 Montserrat,sans-serif;color:var(--muted)}
+.big-price b{font:900 54px/1 Montserrat,sans-serif;background:linear-gradient(180deg,#fff,#8ff0ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.big-price small{font-size:13px;color:var(--ok);font-weight:700}
+.save{display:inline-block;font:800 12px/1 Montserrat,sans-serif;color:#3a2300;background:var(--gold);padding:7px 10px;border-radius:8px;margin-bottom:6px}
+
+/* FAQ */
+.faq{display:grid;gap:10px;max-width:720px;margin:22px auto 0}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:0 16px}
+.faq summary{list-style:none;cursor:pointer;padding:16px 0;font-weight:700;display:flex;justify-content:space-between;gap:14px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:none;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--acc-soft);color:var(--acc);font-size:20px;transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq p{padding:0 0 16px;color:var(--soft);font-size:15px}
+.vop footer{padding:26px 0 130px;color:var(--muted);font-size:12.5px;text-align:center;line-height:1.5}
+
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:40;padding:10px 16px calc(12px + env(safe-area-inset-bottom));background:linear-gradient(180deg,transparent,rgba(7,17,31,.92) 35%);transition:transform .25s}
+.sticky .btn{max-width:520px;margin:0 auto}
+.sticky.hide{transform:translateY(120%)}
+
+/* modal */
+.modal{position:fixed;inset:0;z-index:70;display:flex;align-items:flex-end;justify-content:center;visibility:hidden;pointer-events:none;transition:visibility 0s .32s}
+.modal.open{visibility:visible;pointer-events:auto;transition:none}
+.scrim{position:absolute;inset:0;background:rgba(3,6,12,.72);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);opacity:0;transition:opacity .25s}
+.modal.open .scrim{opacity:1}
+.sheet{position:relative;width:100%;max-width:520px;max-height:92vh;overflow:auto;background:linear-gradient(180deg,#182640,#101a2c);border:1.5px solid rgba(94,225,255,.35);border-bottom:0;border-radius:28px 28px 0 0;padding:14px 18px calc(22px + env(safe-area-inset-bottom));transform:translateY(105%);transition:transform .32s cubic-bezier(.2,.9,.25,1)}
+.modal.open .sheet{transform:none}
+.grab{width:44px;height:5px;border-radius:3px;background:rgba(255,255,255,.22);margin:0 auto 12px}
+.close{position:absolute;top:12px;right:12px;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:rgba(255,255,255,.05);color:#fff;font-size:18px;cursor:pointer}
+.m-head{display:flex;gap:14px;align-items:center;margin-bottom:14px}
+.m-head img{width:58px;border-radius:4px;box-shadow:0 10px 20px -8px rgba(0,0,0,.8)}
+.m-head b{display:block;font:900 18px/1.15 Montserrat,sans-serif;text-transform:uppercase}
+.m-head small{display:block;color:var(--muted);font-size:13px;margin-top:3px}
+.m-head .pr{color:var(--ok);font-weight:800}
+.field{display:flex;flex-direction:column;gap:7px;margin-bottom:12px}
+.field label{font-size:14px;font-weight:600;color:var(--soft)}
+.field input{width:100%;font:500 17px/1.2 Inter,sans-serif;color:var(--text);background:#0a1424;border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:16px;outline:none}
+.field input:focus{border-color:var(--acc);box-shadow:0 0 0 4px rgba(94,225,255,.16)}
+.field.invalid input{border-color:var(--red)}
+.err{color:#ff8a95;font-size:13px;display:none}
+.field.invalid .err{display:block}
+.agree{font-size:12px;color:var(--muted);text-align:center;margin-top:12px}
+.ok{display:none;text-align:center;padding:16px 0 6px}
+.ok .check{width:76px;height:76px;border-radius:50%;margin:0 auto 16px;display:grid;place-items:center;background:var(--acc);color:var(--acc-ink);font-size:38px;font-weight:900}
+.ok h3{font-size:24px;margin-bottom:8px}
+.ok p{color:var(--soft)}
+.lightbox{position:fixed;inset:0;z-index:80;background:rgba(0,0,0,.94);display:none;align-items:center;justify-content:center;padding:14px;overflow:auto}
+.lightbox.open{display:flex}
+.lightbox img{max-height:94vh;width:auto;border-radius:8px}
+
+@media (min-width:760px){
+  .vop section{padding:80px 0}
+  .nums{grid-template-columns:repeat(4,1fr);max-width:none}
+  .anat{grid-template-columns:1.1fr 1fr;max-width:none;align-items:center}
+  .who{grid-template-columns:repeat(4,1fr);max-width:none}
+  .thumbs button{flex-basis:200px}
+  .modal{align-items:center}
+  .sheet{border-radius:28px;border-bottom:1.5px solid rgba(94,225,255,.35);padding:26px 28px;transform:translateY(24px) scale(.97);opacity:0;transition:transform .25s,opacity .25s}
+  .modal.open .sheet{transform:none;opacity:1}
+  .grab{display:none}
+  .sticker{width:124px;height:124px}.sticker b{font-size:26px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+.why{display:grid;grid-template-columns:1fr 1fr;gap:8px;max-width:640px;margin:0 auto}
+.why div{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 12px;font-size:22px}
+.why b{display:block;font-size:14.5px;line-height:1.25;margin-top:6px}
+.why span{display:block;font-size:12.5px;color:var(--muted);margin-top:4px;line-height:1.35}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:720px;margin:0 auto}
+.two button{all:unset;cursor:zoom-in;display:block;border-radius:12px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:0 20px 40px -20px rgba(0,0,0,.8);position:relative}
+.two img{width:100%;aspect-ratio:800/1132;object-fit:cover;object-position:top}
+.two span{position:absolute;left:6px;right:6px;bottom:6px;font:700 11.5px/1.2 Inter,sans-serif;color:#fff;background:rgba(7,17,31,.85);padding:7px 8px;border-radius:8px;text-align:center}
+.tgc{max-width:720px;margin:0 auto;text-align:center;border-radius:26px;padding:26px 18px;background:linear-gradient(160deg,#2aabee,#1e88d4 55%,#1767b4);box-shadow:0 30px 70px -30px rgba(42,171,238,.7)}
+.tg-ico{width:66px;height:66px;margin:0 auto 12px;border-radius:50%;background:rgba(255,255,255,.18);display:grid;place-items:center}
+.tg-ico svg{width:36px;height:36px}
+.tgc h2{font-size:clamp(24px,7vw,40px);color:#fff}
+.tgc h2 span{color:#dff4ff}
+.tgc p{color:#eaf6ff;margin-top:8px;font-size:15px;max-width:460px;margin-inline:auto}
+@media (min-width:760px){.why{grid-template-columns:repeat(4,1fr);max-width:none}}
+.ai-pts{list-style:none;display:grid;gap:8px;margin:0 0 18px;text-align:left}.ai-pts li{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:11px 14px 11px 38px;position:relative;font-size:14px;line-height:1.45;color:#d6dcf5}.ai-pts li:before{content:"✓";position:absolute;left:14px;top:11px;color:#7ef0b0;font-weight:800}.ai-pts b{color:#fff}
+</style>
+<div class="vop">
+<main>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="wrap">
+    <div class="topbar"><span class="new">Жаңа · 2026</span><span class="sep"></span><b>Оқушыларыма арнайы баға</b></div>
+    <h1>
+      <span class="h-small">ВОП-қа арналған практикалық анықтамалық</span>
+      <span class="h-big">Ем схема</span>
+    </h1>
+    <div class="h-pills"><span>100+ диагноз</span><span>препарат</span><span>доза</span></div>
+
+    <div class="book-stage">
+      <div class="book">
+        <div class="spine"></div>
+        <div class="front"><img src="https://sultanabdibaevv-droid.github.io/vop-intensiv/assets/book/cover.jpg" alt="ВОП ем схема — кітап мұқабасы, Dr_Elnora 2026" fetchpriority="high"></div>
+        <div class="pages"></div>
+        <div class="shadow"></div>
+      </div>
+      <div class="sticker"><div><s>25 000 ₸</s><b>9 990 ₸</b><small>оқушыларға</small></div></div>
+      <div class="ai-chip"><i>✨</i><div><b>+ AI-чат</b><small>кітап бойынша чат</small></div></div>
+    </div>
+
+    <div class="price-row"><s>25 000 ₸</s><b>9 990 ₸</b><em>−60%</em></div>
+    <div class="cta-box">
+      <button class="btn shine col" type="button" data-open><span>Сатып алу</span><small>+ AI-чат сыйға</small></button>
+      <p class="cta-note">Электронды кітап · 157 бет · жабық Telegram-канал</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY ===== -->
+<section style="padding-top:30px">
+  <div class="wrap">
+    <h2 class="H sec-title">Неге <span class="acc">керек?</span></h2>
+    <div class="why">
+      <div>⏱️<b>Қабылдауда уақыт үнемдейсіз</b><span>кітапты ашасыз — 30 секундта дайын схема</span></div>
+      <div>💊<b>Препарат, сауда атауы, доза</b><span>балаларға — салмақ бойынша дайын кесте</span></div>
+      <div>🚨<b>Қашан жолдау керек</b><span>қауіпті белгілер қызыл жолақпен белгіленген</span></div>
+      <div>🤰<b>Жүктілік, ГВ кезінде</b><span>болады ма, болмайды ма — бірден жазылған</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHO ===== -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2 class="H sec-title">Кімге <span class="acc">арналған</span></h2>
+    <div class="who" style="margin-top:20px">
+      <div><i>🩺</i>ВОП дәрігерлері</div>
+      <div><i>🏥</i>Учаскелік терапевтер</div>
+      <div><i>👶</i>Педиатрлар</div>
+      <div><i>🎓</i>Интерндер, резиденттер</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ALL SECTIONS ===== -->
+<section id="contents" style="padding-top:0">
+  <div class="wrap">
+    <span class="tag">Мазмұны</span>
+    <h2 class="H sec-title">16 бөлім · <span class="acc">128 тақырып</span></h2>
+    <p class="sec-sub">Ересектер мен балалар · ҚР ДСМ хаттамалары бойынша</p>
+    <div class="secs" id="secs">
+      <details class="sec" open><summary><span class="ico">👃</span><span class="nm"><b>ЛОР және жоғарғы тыныс жолдары</b><small>Грипп, ОРВИ, синусит, отит…</small></span><span class="cnt">13</span></summary>
+        <ul><li>Грипп</li><li>ОРВИ (ЖРВИ)</li><li>Қызу түсіретін дәрілер дозасы</li><li>Ринит</li><li>Синусит (гайморит)</li><li>Фарингит, тонзиллит</li><li>Отит</li><li>Ларингит</li><li>Балалардағы жалған круп</li><li>Инфекциялық мононуклеоз</li><li>Мұрыннан қан кету</li><li>Құлақтағы күкірт тығыны</li><li>Аденоидит</li></ul></details>
+      <details class="sec" open><summary><span class="ico">🫁</span><span class="nm"><b>Төменгі тыныс жолдары</b><small>Жөтел, бронхит, пневмония, демікпе…</small></span><span class="cnt">7</span></summary>
+        <ul><li>Жөтел</li><li>Жедел бронхит</li><li>Бронхообструкция</li><li>Ауруханадан тыс пневмония</li><li>Бронх демікпесі, ӨСОА (ХОБЛ)</li><li>Көкжөтел</li><li>Туберкулезге күдік — алгоритм</li></ul></details>
+      <details class="sec" open><summary><span class="ico">👁️</span><span class="nm"><b>Көз аурулары</b><small>Конъюнктивит, арпа, құрғақ көз</small></span><span class="cnt">3</span></summary>
+        <ul><li>Конъюнктивит</li><li>Арпа, халазион, блефарит</li><li>Құрғақ көз синдромы</li></ul></details>
+      <details class="sec" open><summary><span class="ico">❤️</span><span class="nm"><b>Жүрек-қантамыр жүйесі</b><small>АГ, криз, стенокардия, статиндер…</small></span><span class="cnt">9</span></summary>
+        <ul><li>Артериялық гипертензия</li><li>Гипертониялық криз</li><li>ЖИА, тұрақты стенокардия</li><li>ЖКС: алғашқы көмек және жолдау</li><li>Созылмалы жүрек жеткіліксіздігі</li><li>Жүрекшелер фибрилляциясы — антикоагулянт</li><li>Дислипидемия (статиндер)</li><li>Вена варикозы</li><li>Жүктілердегі АГ, преэклампсия</li></ul></details>
+      <details class="sec" open><summary><span class="ico">🍽️</span><span class="nm"><b>Асқазан-ішек жолдары</b><small>Гастрит, ГЭРА, H. pylori, диарея…</small></span><span class="cnt">18</span></summary>
+        <ul><li>Созылмалы гастрит</li><li>ГЭРА</li><li>H. pylori эрадикациясы</li><li>Ойық жара</li><li>Функционалды диспепсия</li><li>Ішек тітіркену синдромы</li><li>Созылмалы холецистит</li><li>Өт-тас ауруы</li><li>Созылмалы панкреатит</li><li>Бауырдың майлы ауруы</li><li>Вирусты гепатит В, С</li><li>Іш қату</li><li>Жедел диарея</li><li>Балалардағы сусыздану</li><li>Паразиттер, лямблиоз</li><li>Геморрой, анальды жарықшақ</li><li>Нәресте регургитациясы, ГЭРБ</li><li>Балалардағы іш қату</li></ul></details>
+      <details class="sec" open><summary><span class="ico">💧</span><span class="nm"><b>Несеп-жыныс жүйесі</b><small>Цистит, пиелонефрит, энурез…</small></span><span class="cnt">7</span></summary>
+        <ul><li>Цистит</li><li>Пиелонефрит</li><li>Несеп-тас ауруы, бүйрек шаншуы</li><li>Созылмалы бүйрек ауруы</li><li>Простата гиперплазиясы</li><li>Созылмалы простатит</li><li>Балалардағы энурез</li></ul></details>
+      <details class="sec" open><summary><span class="ico">🧪</span><span class="nm"><b>Эндокринді жүйе</b><small>Қант диабеті, гипотиреоз, подагра…</small></span><span class="cnt">10</span></summary>
+        <ul><li>Қант диабеті 2-тип</li><li>Предиабет</li><li>Гипогликемия: шұғыл көмек</li><li>Гипотиреоз</li><li>Тиреотоксикоз</li><li>Қалқанша без түйіндері</li><li>Семіздік</li><li>D витамин жетіспеушілігі</li><li>Подагра, гиперурикемия</li><li>D витамин профилактикасы</li></ul></details>
+      <details class="sec" open><summary><span class="ico">🩸</span><span class="nm"><b>Қан жүйесі</b><small>Темір, В12 және фолий тапшылығы</small></span><span class="cnt">2</span></summary>
+        <ul><li>Темір тапшылықты анемия</li><li>В12 және фолий тапшылықты анемия</li></ul></details>
+      <details class="sec" open><summary><span class="ico">🦴</span><span class="nm"><b>Тірек-қимыл жүйесі</b><small>Остеохондроз, бел ауыруы, жарақат…</small></span><span class="cnt">6</span></summary>
+        <ul><li>Остеохондроз, остеоартроз</li><li>Остеопороз</li><li>Бел ауыруы, радикулопатия</li><li>Иық-жауырын периартриті</li><li>Ревматоидты артрит</li><li>Созылу, көгеру, жарақаттар</li></ul></details>
+      <details class="sec" open><summary><span class="ico">🧠</span><span class="nm"><b>Неврология</b><small>Бас ауыруы, инсульт, құрысу…</small></span><span class="cnt">7</span></summary>
+        <ul><li>Бас ауыруы, мигрень</li><li>Бас айналу (ҚПБА)</li><li>Белл салдануы</li><li>Инсульт пен ТИА-ны тану</li><li>Диабеттік полинейропатия</li><li>Балалардағы фебрильді құрысу</li><li>Инсомния</li></ul></details>
+      <details class="sec" open><summary><span class="ico">🌿</span><span class="nm"><b>Психикалық денсаулық</b><small>Депрессия, дүрбелең шабуылы</small></span><span class="cnt">2</span></summary>
+        <ul><li>Депрессия</li><li>Үрей бұзылысы, дүрбелең (ВСД)</li></ul></details>
+      <details class="sec" open><summary><span class="ico">🌸</span><span class="nm"><b>Аллергология</b><small>Антигистаминдер, есекжем, Квинке</small></span><span class="cnt">3</span></summary>
+        <ul><li>Аллергия — антигистаминдер</li><li>Есекжем</li><li>Квинке ісінуі, анафилаксия</li></ul></details>
+      <details class="sec" open><summary><span class="ico">🧴</span><span class="nm"><b>Тері аурулары</b><small>Дерматит, микоз, акне, герпес…</small></span><span class="cnt">26</span></summary>
+        <ul><li>Атопиялық дерматит</li><li>Контактілі, жаялық дерматиті</li><li>Фурункул, импетиго</li><li>Тері мен тырнақ микоздары</li><li>Акне</li><li>Герпес, белдемелі теміреткі</li><li>Қотыр, педикулез</li><li>Псориаз</li><li>Күйік, жара, сіреспе профилактикасы</li><li>Нәрестелік тері жағдайлары</li><li>Тербөртпе</li><li>Сәби гемангиомасы</li><li>Невустар, сүт-кофе дақтары</li><li>Энтеропатиялық акродерматит</li><li>Герпестік гингивостоматит</li><li>Контагиозды моллюск</li><li>Вирустық сүйелдер</li><li>Жәндік шағуы, кене эритемасы</li><li>Дисгидрозды экзема</li><li>Баздану (интертриго)</li><li>Тері аплазиясы</li><li>Ксантогранулема, фолликулит</li><li>Фолликулярлы кератоз</li><li>Лишайлар</li><li>Мастоцитоз</li><li>Суықтық панникулит</li></ul></details>
+      <details class="sec" open><summary><span class="ico">👩</span><span class="nm"><b>Әйелдер денсаулығы</b><small>Кандидоз, климакс, витаминдер…</small></span><span class="cnt">4</span></summary>
+        <ul><li>Кандидоз, бактериялық вагиноз</li><li>Альгодисменорея</li><li>Климакс</li><li>Жүктілік кезіндегі витаминдер</li></ul></details>
+      <details class="sec" open><summary><span class="ico">👶</span><span class="nm"><b>Балалар инфекциялары, нәрестелер</b><small>Желшешек, колика, патронаж…</small></span><span class="cnt">9</span></summary>
+        <ul><li>Желшешек</li><li>Скарлатина</li><li>Нәрестелер шаншуы (колика)</li><li>Инфекциялық экзантемалар</li><li>Нәресте патронажы (№25 бұйрық)</li><li>Мононуклеоз (ЭБВ)</li><li>Латероторакальды экзантема</li><li>Нәресте сарғаюы</li><li>Дакриоцистит, омфалит, крипторхизм</li></ul></details>
+      <details class="sec" open><summary><span class="ico">💉</span><span class="nm"><b>Дәрілер дозасы — анықтамалық</b><small>Балаларға антибиотиктер дозасы…</small></span><span class="cnt">2</span></summary>
+        <ul><li>Балаларға антибиотиктер дозасы</li><li>Микроциркуляцияны жақсартатын дәрілер</li></ul></details>
+    </div>
+    <button class="sec-open-all" type="button" id="openAll">Жабу ↑</button>
+  </div>
+</section>
+
+
+<!-- ===== EXAMPLE PAGES ===== -->
+<section id="example" style="padding-top:0">
+  <div class="wrap">
+    <span class="tag">Мысал</span>
+    <h2 class="H sec-title">Кітаптан <span class="acc">2 бет</span></h2>
+    <p class="sec-sub">Басып үлкейтіп қараңыз</p>
+    <div class="two">
+      <button type="button" data-src="https://sultanabdibaevv-droid.github.io/vop-intensiv/assets/book/page-gripp.jpg"><img src="https://sultanabdibaevv-droid.github.io/vop-intensiv/assets/book/page-gripp.jpg" alt="Кітап беті: Грипп" loading="lazy"><span>Грипп · балалар дозасы</span></button>
+      <button type="button" data-src="https://sultanabdibaevv-droid.github.io/vop-intensiv/assets/book/page-ag.jpg"><img src="https://sultanabdibaevv-droid.github.io/vop-intensiv/assets/book/page-ag.jpg" alt="Кітап беті: Артериялық гипертензия" loading="lazy"><span>Артериялық гипертензия</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TELEGRAM ===== -->
+<section id="tg" style="padding-top:0">
+  <div class="wrap">
+    <div class="tgc">
+      <div class="tg-ico"><svg viewBox="0 0 24 24"><path fill="#fff" d="M9.8 15.6 9.6 19c.4 0 .6-.2.8-.4l1.9-1.8 4 2.9c.7.4 1.3.2 1.5-.7l2.7-12.6c.3-1.1-.4-1.6-1.1-1.3L3.6 10.4c-1 .4-1 1 0 1.3l4 1.2 9.3-5.8c.4-.3.8-.1.5.2"/></svg></div>
+      <h2 class="H">Кітап <span>Telegram-каналда</span></h2>
+      <p>Төлемнен кейін жабық Telegram-каналға қосыласыз. Кітап сол жерде: телефонда әрдайым қолыңызда, қабылдауда бірден ашасыз.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BOT ===== -->
+<section id="ai" style="padding-top:0">
+  <div class="wrap">
+    <div class="ai">
+      <span class="ai-badge">✨ Сыйлық · AI-чат</span>
+      <h2>Диагнозды жаз — <span>схема ал</span></h2>
+      <p>Кітаптың 5-ші, 6-шы, 7-ші бетін парақтап іздеп отырмайсыз. Диагнозды чатқа жазасыз — жауап бірден келеді.</p>
+      <ul class="ai-pts">
+        <li><b>Тек кітаптағы жауап.</b> Чат кітаптың ішіндегі схеманы ғана береді.</li>
+        <li><b>Артық ештеңе қоспайды.</b> Интернеттен ойдан шығарған дәрі, доза жоқ.</li>
+        <li><b>Бірнеше секундта.</b> Науқас алдында отырып-ақ тексересіз.</li>
+      </ul>
+      <div class="chat">
+        <div class="chat-h"><span class="dot">✨</span><div><b>ВОП ем схема · AI-чат</b><small>● онлайн</small></div></div>
+        <div class="msgs">
+          <div class="m u">Грипп, бала 12 кг. Не беремін?</div>
+          <div class="m a"><b>Грипп · этиологиялық ем</b><br>Флукап суспензия 6 мг/мл:
+            <div class="row"><span>10–15 кг</span><b>30 мг = 5 мл</b></div>
+            <div class="row"><span>Қанша рет</span><b>күніне 2 рет, 5 күн</b></div>
+            <div style="margin-top:6px">Ауру басталғаннан 48 сағат ішінде бастау керек.</div>
+            <div class="warn">⚠ Ентігу, SpO₂ &lt;94%, құрысу — ауруханаға жатқызу.</div>
+          </div>
+        </div>
+      </div>
+      <p class="ai-note">Мысал жауап кітаптың «Грипп» бетінен. Соңғы шешімді емдеуші дәрігер қабылдайды.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== OFFER ===== -->
+<section id="buy" style="padding-top:0">
+  <div class="wrap">
+    <div class="offer">
+      <span class="lbl">Оқушыларыма арнайы баға</span>
+      <h2>Бағасы</h2>
+      <ul class="inc">
+        <li><span>📘 ВОП ем схема · 157 бет</span><em>25 000 ₸</em></li>
+        <li class="gift"><span>✨ Кітап бойынша AI-чат</span><em>сыйға</em></li>
+      </ul>
+      <div class="big-price"><span class="save">15 010 ₸ үнемдейсіз</span><s>25 000 ₸</s><b>9 990 ₸</b><small>бір рет төлейсіз · мәңгілікке сізде</small></div>
+      <button class="btn shine" type="button" data-open>Сатып алу</button>
+      <p class="cta-note">Кітап жабық Telegram-каналда · AI-чат қоса беріледі</p>
+    </div>
+
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">© 2026 Dr. Elnora · «ВОП ем схема»<br>Тек дәрігерлерге арналған анықтамалық. Ем тағайындауды емдеуші дәрігер шешеді.</div></footer>
+
+<div class="sticky hide" id="sticky"><button class="btn shine col" type="button" data-open><span>Сатып алу · 9 990 ₸</span><small>+ AI-чат сыйға</small></button></div>
+
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="scrim" data-close></div>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+    <div class="grab"></div>
+    <button class="close" type="button" data-close aria-label="Жабу">✕</button>
+    <form id="regForm" novalidate>
+      <div class="m-head"><img src="https://sultanabdibaevv-droid.github.io/vop-intensiv/assets/book/cover.jpg" alt=""><div><b id="mTitle">ВОП ем схема</b><small>+ AI-чат · <span class="pr">9 990 ₸</span></small></div></div>
+      <div class="field">
+        <label for="name">Атыңыз</label>
+        <input id="name" name="name" autocomplete="name" placeholder="Атыңызды жазыңыз" required>
+        <span class="err">Атыңызды жазыңыз</span>
+      </div>
+      <div class="field">
+        <label for="phone">WhatsApp нөміріңіз</label>
+        <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 (7__) ___-__-__" required>
+        <span class="err">Нөмірді толық жазыңыз</span>
+      </div>
+      <button class="btn shine" type="submit" id="submitBtn">Сатып алу</button>
+      <p class="agree">Менеджер WhatsApp-қа төлем сілтемесін жібереді.</p>
+    </form>
+    <div class="ok" id="regOk" role="status">
+      <div class="check">✓</div>
+      <h3 class="H">Өтінім қабылданды!</h3>
+      <p>Менеджер WhatsApp-қа жазады. Төлемнен кейін Telegram-каналға қосасыз, AI-чатқа қолжетімділік беріледі.</p>
+    </div>
+  </div>
+</div>
+<div class="lightbox" id="lb"><img alt=""></div>
+</div>
+<script>
+/* НАСТРОЙКИ: куда уходят заявки — подключим через Tilda после утверждения */
+const FORM_ENDPOINT = "";
+
+const modal = document.getElementById('modal'), form = document.getElementById('regForm');
+const nameEl = document.getElementById('name'), phone = document.getElementById('phone');
+function openModal() { modal.classList.add('open'); document.body.classList.add('lock'); setTimeout(() => { if (form.style.display !== 'none') nameEl.focus(); }, 300); }
+function closeModal() { modal.classList.remove('open'); document.body.classList.remove('lock'); }
+/* «Сатып алу» → бірден WhatsApp, дайын хабарламамен */
+const WA_PHONE = '77053683668';
+const WA_TEXT = 'Сәлеметсіз бе! «ВОП ем схема» кітапшасын аламын (9 990 ₸ + AI-чат).';
+const WA_URL = 'https://wa.me/' + WA_PHONE + '?text=' + encodeURIComponent(WA_TEXT);
+document.querySelectorAll('[data-open]').forEach(b => b.addEventListener('click', () => { location.href = WA_URL; }));
+modal.querySelectorAll('[data-close]').forEach(b => b.addEventListener('click', closeModal));
+document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeModal(); lb.classList.remove('open'); } });
+
+phone.addEventListener('focus', () => { if (!phone.value) phone.value = '+7 '; });
+phone.addEventListener('input', () => {
+  let d = phone.value.replace(/\D/g, '');
+  if (d.startsWith('78')) d = '7' + d.slice(2); else if (d.startsWith('8')) d = '7' + d.slice(1);
+  if (d && !d.startsWith('7')) d = '7' + d;
+  d = d.slice(0, 11); const p = d.slice(1);
+  let out = '+7 ';
+  if (p.length) out += '(' + p.slice(0, 3);
+  if (p.length >= 3) out += ') ';
+  if (p.length > 3) out += p.slice(3, 6);
+  if (p.length > 6) out += '-' + p.slice(6, 8);
+  if (p.length > 8) out += '-' + p.slice(8, 10);
+  phone.value = out.trimEnd();
+});
+form.addEventListener('submit', async e => {
+  e.preventDefault();
+  const name = nameEl.value.trim(), digits = phone.value.replace(/\D/g, '');
+  let ok = true;
+  [[nameEl, name.length >= 2], [phone, digits.length === 11]].forEach(([el, v]) => { el.closest('.field').classList.toggle('invalid', !v); if (!v) ok = false; });
+  if (!ok) { form.querySelector('.invalid input').focus(); return; }
+  if (FORM_ENDPOINT) { try { await fetch(FORM_ENDPOINT, { method: 'POST', mode: 'no-cors', body: JSON.stringify({ name, phone: '+' + digits, product: 'ВОП ем схема' }) }); } catch (_) {} }
+  form.style.display = 'none'; document.getElementById('regOk').style.display = 'block';
+});
+
+/* open all sections */
+const openAll = document.getElementById('openAll'), secs = [...document.querySelectorAll('#secs details')];
+openAll.addEventListener('click', () => {
+  const allOpen = secs.every(d => d.open);
+  secs.forEach(d => d.open = !allOpen);
+  openAll.textContent = allOpen ? 'Барлық тақырыпты ашу ↓' : 'Жабу ↑';
+});
+
+/* sticky */
+const sticky = document.getElementById('sticky');
+let heroVis = true, buyVis = false;
+const upd = () => sticky.classList.toggle('hide', heroVis || buyVis);
+new IntersectionObserver(([en]) => { heroVis = en.isIntersecting || en.boundingClientRect.top > 0; upd(); }).observe(document.querySelector('.hero .cta-box'));
+new IntersectionObserver(([en]) => { buyVis = en.isIntersecting; upd(); }, { threshold: .25 }).observe(document.querySelector('.offer'));
+
+/* lightbox */
+const lb = document.getElementById('lb'), lbImg = lb.querySelector('img');
+document.querySelectorAll('[data-src]').forEach(b => b.addEventListener('click', () => { lbImg.src = b.dataset.src; lb.classList.add('open'); }));
+lb.addEventListener('click', () => lb.classList.remove('open'));
+</script>
