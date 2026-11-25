@@ -493,7 +493,11 @@ const modal = document.getElementById('modal'), form = document.getElementById('
 const nameEl = document.getElementById('name'), phone = document.getElementById('phone');
 function openModal() { modal.classList.add('open'); document.body.classList.add('lock'); setTimeout(() => { if (form.style.display !== 'none') nameEl.focus(); }, 300); }
 function closeModal() { modal.classList.remove('open'); document.body.classList.remove('lock'); }
-document.querySelectorAll('[data-open]').forEach(b => b.addEventListener('click', openModal));
+/* «Сатып алу» → бірден WhatsApp, дайын хабарламамен */
+const WA_PHONE = '77053683668';
+const WA_TEXT = 'Сәлеметсіз бе! «ВОП ем схема» кітапшасын аламын (9 990 ₸ + AI-чат).';
+const WA_URL = 'https://wa.me/' + WA_PHONE + '?text=' + encodeURIComponent(WA_TEXT);
+document.querySelectorAll('[data-open]').forEach(b => b.addEventListener('click', () => { location.href = WA_URL; }));
 modal.querySelectorAll('[data-close]').forEach(b => b.addEventListener('click', closeModal));
 document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeModal(); lb.classList.remove('open'); } });
 
